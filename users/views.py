@@ -1,9 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import User
-def index(request):
-    user = User.objects.all()
-    output = ', '.join([u.user.username for u in User.objects.all()])
-    return HttpResponse(output)
+from rest_framework import generics, viewsets, permissions, filters
+from django.contrib.auth.models import User as UserDetail
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.decorators import api_view
+from rest_framework.views import APIView
 
-# Create your views here.
+from users.serializer import UserSerializer
+from .models import User
+
+class GetUser(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+class UserProfileViewSet(viewsets.ModelViewSet):
+    """Handles creating and updating profiles"""
+
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
