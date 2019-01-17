@@ -5,7 +5,6 @@ class LoggedIn(permissions.BasePermission):
         """Check user is trying to edit their own profile."""
         if request.method in permissions.SAFE_METHODS:
             return True
-        print(obj.id)
         return obj.id == request.user.id
     def has_permission(self, request, view):
         """Check user is trying to edit their own profile."""
