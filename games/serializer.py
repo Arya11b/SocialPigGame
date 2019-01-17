@@ -17,7 +17,7 @@ class GameSerializer(serializers.ModelSerializer):
             player1_score=0,
             player2_score=0,
             player1= User.objects.filter(username=self.context['request'].user)[0],
-            player2= User.objects.filter(username=self.context['request'].user)[0],
+            # player2= User.objects.filter(username=self.context['request'].user)[0],
             game_mode= GameMode.objects.filter(name=validated_data['game_mode'])[0]
         )
         game.save()

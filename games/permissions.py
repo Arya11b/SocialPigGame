@@ -6,13 +6,11 @@ class LoggedIn(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
         return obj.id == request.user.id
+
     def has_permission(self, request, view):
         """Check user is trying to edit their own profile."""
-        # return False
-        # print(obj.id)
         if request.method in permissions.SAFE_METHODS:
             return True
-        if request.user.id > 0 :
+        if request.user.id is not None:
             return True
         return False
-        # return obj.id != 0

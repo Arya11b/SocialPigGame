@@ -18,14 +18,14 @@ class Game(models.Model):
     player1_score = models.IntegerField()
     player2_score = models.IntegerField()
     date = models.DateTimeField(default=now)
-    player1 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=0,related_name="player1")
-    player2 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=0,related_name="player2",null=True)
+    player1 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser,related_name="player1")
+    player2 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser,related_name="player2",null=True)
     game_mode = models.ForeignKey(GameMode,on_delete=models.SET_DEFAULT,default=0,related_name="mode")
     done = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
 class Rating(models.Model):
     rate = models.IntegerField()
-    rater = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=0)
+    rater = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser)
     date = models.DateTimeField(default=now)
     validated = models.BooleanField(default=False)
 class Game_Comment(Comment):
