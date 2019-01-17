@@ -1,5 +1,8 @@
 from rest_framework import permissions
 
+from games.models import Game
+
+
 class LoggedIn(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         """Check user is trying to edit their own profile."""

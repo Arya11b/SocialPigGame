@@ -1,3 +1,5 @@
+import hashlib
+
 from django.db import models
 from django.utils.timezone import now
 from django.contrib.auth.models import AnonymousUser
@@ -23,6 +25,12 @@ class Game(models.Model):
     game_mode = models.ForeignKey(GameMode,on_delete=models.SET_DEFAULT,default=0,related_name="mode")
     done = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
+    @property
+    def id_hash(self):
+        return hashlib.md5(str(self.id).encode('utf8')).hexdigest()
+    def __str__(self):
+        # return str(self.id)
+        return self.id_hash
 class Rating(models.Model):
     rate = models.IntegerField()
     rater = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser)

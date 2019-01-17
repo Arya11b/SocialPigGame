@@ -26,6 +26,17 @@ class GameModeViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.LoggedIn,)
     # filter_backends = (filters.SearchFilter,)
     # search_fields = ("username", "email",)
+class Game_CommentViewSet(viewsets.ModelViewSet):
+    serializer_class = Game_CommentSerilizer
+    queryset = Game_Comment.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (permissions.LoggedIn,)
+class Game_RatingViewSet(viewsets.ModelViewSet):
+    serializer_class = Game_RatingSerilizer
+    queryset = Game_Rating.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (permissions.LoggedIn,)
+
 class GameMode_CommentViewSet(viewsets.ModelViewSet):
     serializer_class = GameMode_CommentSerilizer
     queryset = GameMode_Comment.objects.all()
