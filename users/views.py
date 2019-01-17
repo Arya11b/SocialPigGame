@@ -5,7 +5,6 @@ from rest_framework.authtoken.serializers import AuthTokenSerializer
 from users import permissions
 from users.serializer import UserSerializer
 from .models import User
-from rest_framework import viewsets, filters, status
 
 class GetUser(generics.ListCreateAPIView):
     queryset = User.objects.all()
@@ -14,8 +13,10 @@ class UserViewSet(viewsets.ModelViewSet):
     """Handles creating and updating profiles"""
     serializer_class = UserSerializer
     queryset = User.objects.all()
+    # auth
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.UpdateOwnProfile,)
+    # filter
     filter_backends = (filters.SearchFilter,)
     search_fields = ("username", "email",)
 class LoginViewSet(viewsets.ViewSet):
