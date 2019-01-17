@@ -82,9 +82,6 @@ class GameSerializer(serializers.ModelSerializer):
         )
         game.save()
         return game
-        # user.set_password(validated_data["password"])
-        # user.save()
-        # return user
 class GameModeSerializer(serializers.ModelSerializer):
     game_mode = GameMode
     class Meta:
