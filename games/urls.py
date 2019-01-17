@@ -6,6 +6,8 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register("active", views.GameViewSet)
 router.register('modes', views.GameModeViewSet)
+router.register('comments', views.GameMode_CommentViewSet)
+router.register('ratings', views.GameMode_RatingViewSet)
 urlpatterns = [
     # path('', views.GetUser.as_view()),
     path('games/', include(router.urls)),

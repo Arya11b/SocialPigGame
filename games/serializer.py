@@ -5,6 +5,36 @@ from django.contrib.auth.models import User as UserDetail
 from games.models import *
 
 
+class GameMode_CommentSerilizer(serializers.ModelSerializer):
+    comment = GameMode_Comment
+    class Meta:
+        model = GameMode_Comment
+        fields = ('comment_text','game_mode')
+        # extra_kwargs =  {'password': {'write-only': True}}
+    def create(self, validated_data):
+        comment = GameMode_Comment(
+            author= User.objects.filter(username=self.context['request'].user)[0],
+            game_mode= GameMode.objects.filter(name=validated_data["game_mode"])[0],
+            validated=False,
+            comment_text= validated_data["comment_text"]
+        )
+        comment.save()
+        return comment
+class GameMode_RatingSerilizer(serializers.ModelSerializer):
+    rating = GameMode_Rating
+    class Meta:
+        model = GameMode_Rating
+        fields = ('rate','game_mode')
+        # extra_kwargs =  {'password': {'write-only': True}}
+    def create(self, validated_data):
+        rating = GameMode_Rating(
+            rater= User.objects.filter(username=self.context['request'].user)[0],
+            game_mode= GameMode.objects.filter(name=validated_data["game_mode"])[0],
+            rate= validated_data["rate"]
+        )
+        rating.save()
+        return rating
+
 class GameSerializer(serializers.ModelSerializer):
     game = Game
     class Meta:

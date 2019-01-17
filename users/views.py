@@ -32,3 +32,8 @@ class User_CommentViewSet(viewsets.ModelViewSet):
     queryset = User_Comment.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.LoggedIn,)
+class User_AddFriendViewSet(viewsets.ModelViewSet):
+    serializer_class = FriendSerializer
+    queryset = Friends.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (permissions.LoggedIn,)

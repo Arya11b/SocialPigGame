@@ -33,5 +33,18 @@ class UserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data["password"])
         user.save()
         return user
-
+class FriendSerializer(serializers.ModelSerializer):
+    friend = Friends
+    class Meta:
+        model = Friends
+        fields = ('following',)
+        # extra_kwargs =  {'password': {'write-only': True}}
+    def create(self, validated_data):
+        friend = Friends(
+            follower=User.objects.filter(username=self.context['request'].user)[0],
+            following=User.objects.filter(username=validated_data["following"])[0]
+        )
+        # user.set_friends()
+        friend.save()
+        return friend
 

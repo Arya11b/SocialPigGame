@@ -33,7 +33,7 @@ class Game_Comment(Comment):
 class Game_Rating(Rating):
     game = models.ForeignKey(Game,on_delete=models.CASCADE,default=0)
 class GameMode_Comment(Comment):
-    game = models.ForeignKey(Game,on_delete=models.CASCADE,default=0)
+    game_mode = models.ForeignKey(GameMode,on_delete=models.CASCADE,default=0)
 class GameMode_Rating(Rating):
-    game = models.ForeignKey(Game,on_delete=models.CASCADE,default=0)
+    game_mode = models.ForeignKey(GameMode,on_delete=models.CASCADE,default=0)
 

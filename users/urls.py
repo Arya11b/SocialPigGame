@@ -6,6 +6,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register('profile' , views.UserViewSet)
 router.register('comment' , views.User_CommentViewSet)
+router.register('friends' , views.User_AddFriendViewSet)
 router.register('login' ,views.LoginViewSet, base_name='login')
 urlpatterns = [
     # path('', views.GetUser.as_view()),
