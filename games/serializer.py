@@ -24,7 +24,7 @@ class GameSerializer(serializers.ModelSerializer):
 class GameModeSerializer(serializers.ModelSerializer):
     game_mode = GameMode
     class Meta:
-        model = Game
+        model = GameMode
         fields = ('name','death_dice','max_score','dice_count','max_dice_role','creator')
         # extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
@@ -36,6 +36,7 @@ class GameModeSerializer(serializers.ModelSerializer):
             max_dice_role=validated_data["max_dice_role"],
             creator=self.context['request'].user,
         )
+        print(self.context['request'].user)
         game_mode.save()
         return game_mode
         # user.set_password(validated_data["password"])

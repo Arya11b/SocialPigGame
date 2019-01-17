@@ -1,8 +1,6 @@
 from rest_framework import generics, viewsets, filters
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.authtoken.views import ObtainAuthToken
-from rest_framework.authtoken.serializers import AuthTokenSerializer
-from users import permissions
+from games import permissions
 from games.serializer import *
 from .models import *
 
@@ -17,14 +15,14 @@ class GameViewSet(viewsets.ModelViewSet):
     # permission_classes = (permissions.UpdateOwnProfile,)
     # filter_backends = (filters.SearchFilter,)
     # search_fields = ("username", "email",)
-class GetActiveGameModes(generics.ListCreateAPIView):
+class GetGameModes(generics.ListCreateAPIView):
     queryset = GameMode.objects.all()
     serializer_class = GameModeSerializer
 class GameModeViewSet(viewsets.ModelViewSet):
     """Handles creating and updating game modes"""
     serializer_class = GameModeSerializer
-    queryset = Game.objects.filter(active=True)
-    # authentication_classes = (TokenAuthentication,)
-    # permission_classes = (permissions.UpdateOwnProfile,)
+    queryset = GameMode.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (permissions.LoggedIn,)
     # filter_backends = (filters.SearchFilter,)
     # search_fields = ("username", "email",)
