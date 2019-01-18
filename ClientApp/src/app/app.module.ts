@@ -22,6 +22,7 @@ import { TextFieldComponent } from './components/text-field/text-field.component
 import { FieldComponent } from './form/field/field.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { GameComponent } from './game/game.component';
+import {AuthComponent} from './form/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { GameComponent } from './game/game.component';
     UserComponent,
     FieldComponent,
     AllUsersComponent,
-    GameComponent
+    GameComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

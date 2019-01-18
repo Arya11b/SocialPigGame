@@ -1,3 +1,11 @@
-<p>
-  login works!
-</p>
+<h1 mat-dialog-title>
+  Sign Up
+</h1>
+<mat-dialog-content>
+  <mat-card class="mat-elevation-z10">
+    <app-auth [loginForm]="loginForm"></app-auth>
+    <button class="forms-button" routerLink="/all-users" [disabled]="disableSubmit()" (click)="onSubmit()" mat-button>register
+    </button>
+  </mat-card>
+
+</mat-dialog-content>

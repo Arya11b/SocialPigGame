@@ -28,6 +28,7 @@ export class SignupComponent implements OnInit {
     console.log(this.userForm.value.userName);
     this.user.username = this.userForm.value.userName;
     this.user.password = this.userForm.value.password;
+    this.user.picture = '';
     this.user.email = this.userForm.value.email;
     this.userService.postUser(this.user);
 
