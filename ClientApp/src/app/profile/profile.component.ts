@@ -13,23 +13,24 @@ import {Observable} from 'rxjs/Observable';
 export class ProfileComponent implements OnInit {
   user: any;
   oUsers: Observable<any[]>;
-  params: ParamMap;
   constructor(private route: ActivatedRoute, private userService:  UserService) { }
 
   ngOnInit() {
-    this.user = {};
     let id = this.route.snapshot.params['id'];
     console.log(id);
-    // this.route.paramMap.pipe(
-    //   switchMap((params: ParamMap) => this.userService.getUser(params.get('id')))
-    // );
-    this.oUsers = this.userService.getOUsers();
-    this.userService.getUser(id);
-    this.oUsers.subscribe(data => {
-        this.user = data[0];
-        console.log(this.user);
+    this.user = this.userService.getUser(id).subscribe(
+      data => {
+        this.user = data;
+        console.log(data);
       }
     );
+    // this.oUsers = this.userService.getOUsers();
+    // this.userService.getUser(id);
+    // this.oUsers.subscribe(data => {
+    //     this.user = data[0];
+    //     console.log(this.user);
+    //   }
+    // );
   }
 
 }

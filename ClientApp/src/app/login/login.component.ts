@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
               private router: Router,
               private alertService: AlertService) {
     if (this.authService.currentUserValue) {
+      console.log(this.authService.currentUserValue);
       this.router.navigate(['/']);
     }
   }

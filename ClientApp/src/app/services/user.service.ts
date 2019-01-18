@@ -7,7 +7,8 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
-  url = 'http://localhost:8000/api/users/profile/';
+  profileUrl = 'http://localhost:8000/api/users/profile/';
+  commentUrl = 'http://localhost:8000/api/users/comment/';
   private dataStore: any[];
   _Users: BehaviorSubject<any[]>;
   constructor(private http: HttpClient) {
@@ -18,7 +19,7 @@ export class UserService {
   postUser(user: any): Promise<any> {
     return new Promise((resolver, reject) => {
       this.dataStore.push(user);
-      this.http.post(this.url, user).subscribe(
+      this.http.post(this.profileUrl, user).subscribe(
         user => {
           this._Users.next(Object.assign({}, this).dataStore);
           console.log(user);
@@ -29,16 +30,16 @@ export class UserService {
     );
   }
   // // put request
-  // updateUser(id: number, user: User) {
-  //   console.log(user);
-  //   const userIdUrl = this.url + '/' + user.id;
+  // updateUser(id: number, author: User) {
+  //   console.log(author);
+  //   const userIdUrl = this.profileUrl + '/' + author.id;
 
   //   console.log(userIdUrl);
   //   return new Promise((resolver, reject) => {
-  //     this.http.put(userIdUrl, user).subscribe(
-  //       user => {
-  //         console.log(user);
-  //         this.http.get<User[]>(this.url)
+  //     this.http.put(userIdUrl, author).subscribe(
+  //       author => {
+  //         console.log(author);
+  //         this.http.get<User[]>(this.profileUrl)
   //           .subscribe(
   //             data => {
   //               this.dataStore.users = data;
@@ -48,18 +49,18 @@ export class UserService {
   //             });
   //       }
   //     );
-  //     resolver(user);
+  //     resolver(author);
   //   }
   //   );
   // }
   // // delete request
-  // deleteUser(user: User) {
-  //   console.log(user);
-  //   const usersUrlDel = this.url + '/' + user.id;
+  // deleteUser(author: User) {
+  //   console.log(author);
+  //   const usersUrlDel = this.profileUrl + '/' + author.id;
   //   return new Promise((resolver, reject) => {
   //     this.http.delete(usersUrlDel).subscribe(
-  //       user => {
-  //         this.http.get<User[]>(this.url)
+  //       author => {
+  //         this.http.get<User[]>(this.profileUrl)
   //           .subscribe(
   //             data => {
   //               this.dataStore.users = data;
@@ -69,35 +70,21 @@ export class UserService {
   //             });
   //       }
   //     );
-  //     resolver(user);
+  //     resolver(author);
   //   }
   //   );
   // }
   // fetch Datas
   getUser(id) {
-    console.log(this.url + id);
+    console.log(this.profileUrl + id);
     console.log('barboora');
-    return this.http.get<any>(this.url + id)
-      .subscribe(data => {
-      console.log('barboora');
-      console.log(data);
-      this.dataStore = [data];
-      this._Users.next(Object.assign({}, this).dataStore);
-    }, error => {
-      console.log(error);
-    });
-    // return this.http.get<User>(this.url + '/' + id).pipe(
-    //   map((user: User) => user)
-    // );
+    return this.http.get<any>(this.profileUrl + id);
   }
   getUsers() {
-    return this.http.get<any[]>(this.url)
-      .subscribe(data => {
-        this.dataStore = data;
-        this._Users.next(Object.assign({}, this).dataStore);
-      }, error => {
-        console.log(error);
-      });
+    return this.http.get<any[]>(this.profileUrl);
+  }
+  getUserComments(id) {
+    return this.http.get<any[]>(this.commentUrl);
   }
 
   // observables

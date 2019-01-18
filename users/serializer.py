@@ -5,7 +5,8 @@ class User_CommentSerilizer(serializers.ModelSerializer):
     comment = User_Comment
     class Meta:
         model = User_Comment
-        fields = ('comment_text','on_user')
+        fields = ('comment_text','on_user','author')
+        read_only_fields = ('author',)
         # extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
         comment = User_Comment(
