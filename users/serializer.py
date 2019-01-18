@@ -21,8 +21,9 @@ class UserSerializer(serializers.ModelSerializer):
     user = User
     class Meta:
         model = User
-        fields = ('username','email','picture','password')
-        # extra_kwargs =  {'password': {'write-only': True}}
+        fields = ('username','email','picture','password','date_joined','id')
+        read_only_fields = ('date_joined','id')
+        extra_kwargs =  {'password': {'write_only': True}}
     def create(self, validated_data):
         user = User(
             username=validated_data["username"],
@@ -38,7 +39,7 @@ class FriendSerializer(serializers.ModelSerializer):
     class Meta:
         model = Friends
         fields = ('following',)
-        # extra_kwargs =  {'password': {'write-only': True}}
+        extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
         friend = Friends(
             follower=User.objects.filter(username=self.context['request'].user)[0],

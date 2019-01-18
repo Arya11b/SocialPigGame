@@ -2,33 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71d78573-3e46-4be6-af93-746c89e3d397" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0ceea01-be97-4498-9b28-9efd13aa82f7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e2ad45a3-5692-46c0-a870-24ecfb8cddbc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eb401b3e-f1ee-4e65-8133-ba854c2e4723.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/e2e/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/e2e/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/components/text-field/text-field.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/components/text-field/text-field.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/components/text-field/text-field.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/counter/counter.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/counter/counter.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/counter/counter.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/fetch-data/fetch-data.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/fetch-data/fetch-data.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/field/field.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/field/field.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/models/FieldAutoComplete.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/models/FieldBase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/models/FieldDate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/models/FieldDropdown.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/models/FieldTextBox.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/models/FieldTree.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/game/game.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/game/game.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/game/game.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/menu/menu.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/menu/menu.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/menu/menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/services/field.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/shared/img/dice-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/shared/img/dice-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/shared/img/dice-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/shared/img/dice-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/shared/img/dice-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/shared/img/dice-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/shared/material.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/toolbar/toolbar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/toolbar/toolbar.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/toolbar/toolbar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/typings.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/e2e/tsconfig.e2e.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/e2e/tsconfig.e2e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diceDB.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/diceDB.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dicemania/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dicemania/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dicemania/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dicemania/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/serializer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,10 +110,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ClientApp/package.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51" />
+            <state relative-caret-position="204">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dicemania/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <marker date="1547789682078" expanded="true" signature="3386:3636" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="362" selection-start-line="362" selection-end-line="362" />
+              <folding>
+                <element signature="e#34476#37167#0" />
+                <element signature="e#37225#37952#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://132d7814-7acb-4aac-94f0-ca92d9d933dd/schema/main/table/users_user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -114,7 +204,6 @@
         <option value="$PROJECT_DIR$/users/admin.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
         <option value="$PROJECT_DIR$/users/permissions.py" />
-        <option value="$PROJECT_DIR$/users/serializer.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/users/urls.py" />
         <option value="$PROJECT_DIR$/games/models.py" />
@@ -122,8 +211,15 @@
         <option value="$PROJECT_DIR$/games/urls.py" />
         <option value="$PROJECT_DIR$/games/permissions.py" />
         <option value="$PROJECT_DIR$/games/serializer.py" />
-        <option value="$PROJECT_DIR$/dicemania/settings.py" />
         <option value="$PROJECT_DIR$/dicemania/urls.py" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.html" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.ts" />
+        <option value="$PROJECT_DIR$/users/serializer.py" />
+        <option value="$PROJECT_DIR$/dicemania/settings.py" />
       </list>
     </option>
   </component>
@@ -150,12 +246,12 @@
             <path>
               <item name="dicemania" type="b2602c69:ProjectViewProjectNode" />
               <item name="dicemania" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientApp" type="462c0819:PsiDirectoryNode" />
+              <item name="dicemania" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dicemania" type="b2602c69:ProjectViewProjectNode" />
               <item name="dicemania" type="462c0819:PsiDirectoryNode" />
-              <item name="dicemania" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -171,6 +267,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="ts.external.directory.path" value="F:\Programming\python\dicemania\ClientApp\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -223,7 +320,8 @@
       <workItem from="1547618738262" duration="25840000" />
       <workItem from="1547659663289" duration="6321000" />
       <workItem from="1547712046801" duration="36123000" />
-      <workItem from="1547758209249" duration="241000" />
+      <workItem from="1547758209249" duration="3342000" />
+      <workItem from="1547785501649" duration="4424000" />
     </task>
     <task id="LOCAL-00001" summary="user Authenticate bug fixed&#10;game serializer&#10;game mode serializer">
       <created>1547719345768</created>
@@ -274,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547743706219</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="front-end:&#10;+ sign up page&#10;+ login page&#10;+ game page&#10;+ reactive forms">
+      <created>1547758504534</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547758504534</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68525000" />
+    <option name="totallyTimeSpent" value="76050000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -292,7 +397,7 @@
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25955734" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26291078" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -309,6 +414,7 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49899396" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.501006" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49966466" weight="0.32956153" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -326,7 +432,8 @@
     <MESSAGE value="Users Can Comment&#10;Comment Authorization" />
     <MESSAGE value="Users Can Comment on GameModes&#10;User add friend" />
     <MESSAGE value="add Game Rating&#10;add Game Comment&#10;Game hash generate" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Game Rating&#10;add Game Comment&#10;Game hash generate" />
+    <MESSAGE value="front-end:&#10;+ sign up page&#10;+ login page&#10;+ game page&#10;+ reactive forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="front-end:&#10;+ sign up page&#10;+ login page&#10;+ game page&#10;+ reactive forms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -344,38 +451,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2444">
-          <caret line="382" column="6" selection-start-line="382" selection-start-column="6" selection-end-line="382" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1410eb2e-f829-4307-8b3a-e128c3cd25aa/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3fa57eb3-cf18-48e6-8b6f-4608ab05d6b3/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://e2ad45a3-5692-46c0-a870-24ecfb8cddbc/collation/NOCASE" />
-    <entry file="das://e2ad45a3-5692-46c0-a870-24ecfb8cddbc/collation/RTRIM" />
-    <entry file="file://$PROJECT_DIR$/users/migrations/0002_auto_20190116_1326.py" />
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c9c8da0a-b2cb-4998-af5e-16b54be98580/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/games/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_images/photo_2018-11-30_19-00-56.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -461,23 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3260">
-          <caret line="968" column="8" selection-start-line="968" selection-start-column="8" selection-end-line="968" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -495,16 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/hashers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -516,26 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="142" column="22" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -592,16 +620,6 @@
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dicemania/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <marker date="1547752150043" expanded="true" signature="3027:3277" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/games/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -618,6 +636,130 @@
     <entry file="file://$PROJECT_DIR$/ClientApp/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/game/game.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="43" lean-forward="true" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/node_modules/loader-runner/lib/LoaderRunner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="362" selection-start-line="362" selection-end-line="362" />
+          <folding>
+            <element signature="e#34476#37167#0" />
+            <element signature="e#37225#37952#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://132d7814-7acb-4aac-94f0-ca92d9d933dd/schema/main/table/users_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="287" column="6" selection-start-line="287" selection-start-column="6" selection-end-line="287" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="43" lean-forward="true" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dicemania/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <marker date="1547789682078" expanded="true" signature="3386:3636" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

@@ -1,0 +1,45 @@
+$iconWidth: 56px;
+.main-img{
+  -webkit-user-select: none;
+  height: auto;
+  width: auto;
+  background-position: 0px 0px, 10px 10px;
+  background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);
+}
+.main{
+  flex-direction: row;
+}
+.main-title{
+  margin: auto;
+  font-size: 30px;
+  font-family: "Microsoft JhengHei";
+  color: lightcyan;
+}
+.sidenav-component{
+  padding: 0;
+  margin: 8px;
+  min-width: $iconWidth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-icon {
+  color: white;
+  font-size: 30px;
+  height: $iconWidth;
+  width: $iconWidth;
+  line-height: $iconWidth;
+}
+.toolbar-list{
+  flex: 1;
+  flex-direction: row;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+dropdown-menu{
+  width: 100%;
+}
+.hide{
+  display:none;
+}

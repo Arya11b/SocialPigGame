@@ -26,8 +26,8 @@ SECRET_KEY = 'm+xti7h9$==r4m6nsjcb#fs5b3bw$99h^2-*dt1d-c$sysqsvv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
-INTERNAL_IPS = ('127.0.0.1', '0.0.0.0')
+# ALLOWED_HOSTS = ['127.0.0.1']
+# INTERNAL_IPS = ('127.0.0.1', '0.0.0.0')
 
 # Application definition
 
@@ -42,10 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     # 'users'
 ]
 
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,6 +58,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+# CORS_ORIGIN_WHITELIST = (
+#     '127.0.0.1',
+#     'localhost:4200',
+#     '127.0.0.1:4200'
+# )
+
+CORS_ORIGIN_REGEX_WHITELIST = (
+    r'^(https?://)?(\w+\.)?localhost:4200*',
+)
+# CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = False
 
 ROOT_URLCONF = 'dicemania.urls'
 

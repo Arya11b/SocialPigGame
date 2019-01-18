@@ -1,0 +1,10 @@
+<div *ngIf="field">
+<div [ngSwitch]="field.controlType">
+  <div *ngSwitchCase="'textbox'">
+    <app-text-field [form]="form" [field]="field"></app-text-field>
+  </div>
+  <div *ngSwitchCase="'dropdown'">
+    <app-dropdown [field]="field" [form]="form"></app-dropdown>
+  </div>
+</div>
+</div>

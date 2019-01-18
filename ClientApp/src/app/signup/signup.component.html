@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>
+    Sign Up
+  </h1>
+  <mat-dialog-content>
+    <mat-card class="mat-elevation-z10">
+      <app-user [userForm]="userForm"></app-user>
+      <button class="forms-button" routerLink="\" [disabled]="disableSubmit()" (click)="onSubmit()" mat-button>register
+      </button>
+    </mat-card>
+
+  </mat-dialog-content>
