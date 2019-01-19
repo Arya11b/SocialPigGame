@@ -22,13 +22,15 @@ class UserSerializer(serializers.ModelSerializer):
     user = User
     class Meta:
         model = User
-        fields = ('username','email','picture','password','date_joined','id')
-        read_only_fields = ('date_joined','id','picture')
+        fields = ('username','email','picture','password','date_joined','id','first_name','last_name','last_login')
+        read_only_fields = ('date_joined','id','picture','last_login')
         extra_kwargs =  {'password': {'write_only': True}}
     def create(self, validated_data):
         user = User(
             username=validated_data["username"],
             email=validated_data["email"],
+            first_name=validated_data["first_name"],
+            last_name=validated_data["last_name"],
             # picture=validated_data["picture"],
         )
         # user.set_friends()

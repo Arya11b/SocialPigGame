@@ -2,23 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71d78573-3e46-4be6-af93-746c89e3d397" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/comment/comment.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/comment/comment.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/comment/comment.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/services/alert.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/services/authentication.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/comment-field/comment-field.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/comment-field/comment-field.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/comment-field/comment-field.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/comment/comment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/comment/comment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/components/dropdown-multiple/dropdown-multiple.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/components/text-field/text-field.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/components/text-field/text-field.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/components/text-field/text-field.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/form/auth/auth.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/form/auth/auth.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/services/alert.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/services/authentication.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/services/field.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/signup/signup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientApp/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/serializer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="59" lean-forward="true" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+            <state relative-caret-position="221">
+              <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -77,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dicemania/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="392">
               <caret line="69" selection-start-line="69" selection-end-line="69" />
               <folding>
                 <marker date="1547789682078" expanded="true" signature="3386:3636" ph="..." />
@@ -87,18 +107,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://132d7814-7acb-4aac-94f0-ca92d9d933dd/schema/main/table/users_user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
+            <state relative-caret-position="251">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
@@ -110,7 +121,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/users/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="271">
               <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
@@ -170,8 +181,8 @@
         <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.ts" />
         <option value="$PROJECT_DIR$/dicemania/settings.py" />
-        <option value="$PROJECT_DIR$/users/serializer.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
+        <option value="$PROJECT_DIR$/users/serializer.py" />
       </list>
     </option>
   </component>
@@ -187,7 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,6 +219,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,7 +284,8 @@
       <workItem from="1547659663289" duration="6321000" />
       <workItem from="1547712046801" duration="36123000" />
       <workItem from="1547758209249" duration="3342000" />
-      <workItem from="1547785501649" duration="9978000" />
+      <workItem from="1547785501649" duration="13811000" />
+      <workItem from="1547874076006" duration="2484000" />
     </task>
     <task id="LOCAL-00001" summary="user Authenticate bug fixed&#10;game serializer&#10;game mode serializer">
       <created>1547719345768</created>
@@ -345,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547810016529</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="front-end:&#10;+ comment component&#10;+ comment field component init&#10;+ profile comments list">
+      <created>1547820335015</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1547820335015</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81604000" />
+    <option name="totallyTimeSpent" value="87921000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,14 +381,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2622401" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26626426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32956153" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,7 +396,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49899396" weight="0.32956153" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49899396" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.501006" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49966466" weight="0.32956153" />
       <window_info anchor="bottom" id="TypeScript" order="14" />
@@ -402,7 +420,8 @@
     <MESSAGE value="front-end:&#10;+ sign up page&#10;+ login page&#10;+ game page&#10;+ reactive forms" />
     <MESSAGE value="front-end:&#10;+ get all users&#10;+ get user by id&#10;back-end:&#10;+ add id as read only field in user serializer" />
     <MESSAGE value="front-end:&#10;+ user login&#10;+ user auth service&#10;+ alert service" />
-    <option name="LAST_COMMIT_MESSAGE" value="front-end:&#10;+ user login&#10;+ user auth service&#10;+ alert service" />
+    <MESSAGE value="front-end:&#10;+ comment component&#10;+ comment field component init&#10;+ profile comments list" />
+    <option name="LAST_COMMIT_MESSAGE" value="front-end:&#10;+ comment component&#10;+ comment field component init&#10;+ profile comments list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -614,13 +633,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts" />
     <entry file="file://$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -687,20 +700,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dicemania/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <marker date="1547789682078" expanded="true" signature="3386:3636" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="59" lean-forward="true" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        <state relative-caret-position="221">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -714,9 +717,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dicemania/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <marker date="1547789682078" expanded="true" signature="3386:3636" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
+        <state relative-caret-position="251">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
@@ -726,7 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="271">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />

@@ -1,24 +1,44 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { UserService } from '../services/user.service';
+﻿import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { first } from 'rxjs/operators';
 
-@Component({
-  selector: 'app-all-users',
-  templateUrl: './all-users.component.html',
-  styleUrls: ['./all-users.component.scss']
-})
-export class AllUsersComponent implements OnInit {
+import { User } from '../_models';
+import { UserService, AuthenticationService } from '../_services';
 
-  users: any[];
-  constructor(private userService: UserService) {
-   }
+@Component({ templateUrl: 'all-users.component.html' })
+export class AllUsersComponent implements OnInit, OnDestroy {
+    currentUser: User;
+    currentUserSubscription: Subscription;
+    users: User[] = [];
 
-  ngOnInit() {
-    this.userService.getUsers().subscribe(data => {
-      this.users = data;
-    }, error => {
-      console.log(error);
-    });
-  }
+    constructor(
+        private authenticationService: AuthenticationService,
+        private userService: UserService
+    ) {
+        this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
+            this.currentUser = user;
+        });
+    }
 
+    ngOnInit() {
+        this.loadAllUsers();
+    }
+
+    ngOnDestroy() {
+        // unsubscribe to ensure no memory leaks
+        this.currentUserSubscription.unsubscribe();
+    }
+
+    deleteUser(id: number) {
+        this.userService.delete(id).pipe(first()).subscribe(() => {
+            this.loadAllUsers();
+        });
+    }
+
+    private loadAllUsers() {
+        this.userService.getAll().pipe(first()).subscribe(users => {
+          console.log(users);
+            this.users = users;
+        });
+    }
 }

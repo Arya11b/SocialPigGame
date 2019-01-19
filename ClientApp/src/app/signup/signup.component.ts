@@ -1,7 +1,8 @@
-import { UserService } from './../services/user.service';
+import { UserService } from './../_services/user.service';
 import { FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import {User} from '../_models';
 
 @Component({
   selector: 'app-signup',
@@ -11,13 +12,13 @@ import { Observable } from 'rxjs';
 export class SignupComponent implements OnInit {
   userForm = new FormGroup({});
   // migrate to all users page
-  user: {[k: string]: any} = {};
+  user: User;
 
   constructor(private userService: UserService) {
   }
 
   ngOnInit() {
-    this.user = {};
+    this.user = new User;
   }
 
   disableSubmit(): boolean {
@@ -28,9 +29,9 @@ export class SignupComponent implements OnInit {
     console.log(this.userForm.value.userName);
     this.user.username = this.userForm.value.userName;
     this.user.password = this.userForm.value.password;
-    this.user.picture = '';
+    // this.user.picture = '';
     this.user.email = this.userForm.value.email;
-    this.userService.postUser(this.user);
+    this.userService.register(this.user);
 
   }
 }

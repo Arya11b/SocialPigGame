@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from '../services/user.service';
+import {UserService} from '../_services/user.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {switchMap} from 'rxjs-compat/operator/switchMap';
 import {forEach} from '@angular/router/src/utils/collection';
@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
     console.log(id);
-    this.user = this.userService.getUser(id).subscribe(
+    this.user = this.userService.getById(id).subscribe(
       data => {
         this.user = data;
         console.log(data);

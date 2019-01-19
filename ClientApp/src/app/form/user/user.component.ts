@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, Input} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {FieldService} from "../../services/field.service";
+import {FieldService} from "../../_services/field.service";
 
 @Component({
   selector: 'app-user',
