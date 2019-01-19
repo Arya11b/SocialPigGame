@@ -1,0 +1,21 @@
+<mat-card>
+  <div> top rated Games</div>
+  <div *ngFor="let mode of modeRates">
+  <div> {{mode.name}}</div>
+  <div> {{mode.rate}}</div>
+</div>
+</mat-card>
+<mat-card>
+  <div> most played Games</div>
+  <div *ngFor="let mode of modeCount">
+    <div> {{mode.name}}</div>
+    <div> {{mode.count}}</div>
+  </div>
+</mat-card>
+<mat-card>
+  <div> newest top rated Games</div>
+  <div *ngFor="let mode of newModeRates">
+    <div> {{mode.name}}</div>
+    <div> {{mode.rate}}</div>
+  </div>
+</mat-card>

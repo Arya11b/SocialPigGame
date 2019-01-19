@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from users.models import *
 
-class User_CommentSerilizer(serializers.ModelSerializer):
+class UserCommentSerilizer(serializers.ModelSerializer):
     comment = User_Comment
     class Meta:
         model = User_Comment
@@ -17,7 +17,20 @@ class User_CommentSerilizer(serializers.ModelSerializer):
         )
         comment.save()
         return comment
+class AdminCommentSerializer(serializers.ModelSerializer):
+    comment = User_Comment
+    class Meta:
+        model = User_Comment
+        fields = ('comment_text','on_user','author','validated','id')
+        read_only_fields = ('author','comment_text','on_user','id')
 
+        def create(self, validated_data):
+            comment = User_Comment(
+                validated=validated_data["validated"],
+            )
+            comment.save()
+            return comment
+        # extra_kwargs =  {'password': {'write-only': True}}
 class UserSerializer(serializers.ModelSerializer):
     user = User
     class Meta:

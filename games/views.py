@@ -26,24 +26,38 @@ class GameModeViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.LoggedIn,)
 class Game_CommentViewSet(viewsets.ModelViewSet):
-    serializer_class = Game_CommentSerilizer
-    queryset = Game_Comment.objects.all()
+    serializer_class = GameCommentSerilizer
+    queryset = Game_Comment.objects.filter(validated=True)
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.LoggedIn,)
+    def get_serializer_class(self):
+        if self.request.user.is_staff:
+            return AdminGameCommentSerilizer
+        else: return GameCommentSerilizer
+    def get_queryset(self):
+        if self.request.user.is_staff:
+            return GameMode_Comment.objects.all()
 class Game_RatingViewSet(viewsets.ModelViewSet):
-    serializer_class = Game_RatingSerilizer
+    serializer_class = GameRatingSerilizer
     queryset = Game_Rating.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.LoggedIn,)
 
 class GameMode_CommentViewSet(viewsets.ModelViewSet):
-    serializer_class = GameMode_CommentSerilizer
-    queryset = GameMode_Comment.objects.all()
+    queryset = GameMode_Comment.objects.filter(validated=True)
     authentication_classes = (TokenAuthentication,)
-    permission_classes = (permissions.LoggedIn,)
+    permission_classes = (permissions.Admin,)
+    def get_serializer_class(self):
+        if self.request.user.is_staff:
+            return AdminGameModeCommentSerilizer
+        else: return GameModeCommentSerilizer
+    def get_queryset(self):
+        if self.request.user.is_staff:
+            return GameMode_Comment.objects.all()
 class GameMode_RatingViewSet(viewsets.ModelViewSet):
-    serializer_class = GameMode_RatingSerilizer
+    serializer_class = GameModeRatingSerilizer
     queryset = GameMode_Rating.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.LoggedIn,)
+
 

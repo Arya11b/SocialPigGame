@@ -2,29 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71d78573-3e46-4be6-af93-746c89e3d397" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/_models/game.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/_models/gamemode.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/_models/rating.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/designed-games/designed-games.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/designed-games/designed-games.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/designed-games/designed-games.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/online-users/online-users.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/online-users/online-users.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/online-users/online-users.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/_services/game.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/best-game-modes/best-game-modes.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/best-game-modes/best-game-modes.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientApp/src/app/best-game-modes/best-game-modes.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/games/migrations/0008_auto_20190119_1146.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/_models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/_models/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/_services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/_services/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/app.routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/game-design/game-design.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/game-design/game-design.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/game/game.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientApp/src/app/toolbar/toolbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ClientApp/src/app/toolbar/toolbar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/diceDB.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/diceDB.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,22 +60,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
+            <state relative-caret-position="136">
+              <caret line="23" selection-start-line="23" selection-end-line="25" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#782#1358#0" />
+                <element signature="e#1416#1877#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+            <state relative-caret-position="120">
+              <caret line="40" selection-start-line="40" selection-end-line="52" />
               <folding>
                 <element signature="e#1#57#0" expanded="true" />
+                <element signature="e#604#942#0" />
+                <element signature="e#986#1371#0" />
+                <element signature="e#1428#1601#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/games/permissions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,84 +101,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/games/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            <state relative-caret-position="330">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#793#868#0" />
+                <element signature="e#919#1146#0" />
+                <element signature="e#1454#1634#0" />
+                <element signature="e#1959#2147#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/games/urls.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/users/permissions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/games/serializer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-556">
-              <caret line="845" column="34" selection-start-line="845" selection-start-column="34" selection-end-line="845" selection-end-column="34" />
-              <folding>
-                <element signature="e#3426#11225#0" />
-                <element signature="e#11342#12638#0" />
-                <element signature="e#12675#13489#0" />
-                <element signature="e#13570#21647#0" />
-                <element signature="e#21807#29326#0" />
-                <element signature="e#29504#31859#0" />
-                <element signature="e#31901#61480#0" />
-                <element signature="e#34476#37167#0" />
-                <element signature="e#37225#37952#0" />
-                <element signature="e#38028#40771#0" />
-                <element signature="e#40903#44806#0" />
-                <element signature="e#44884#45201#0" />
-                <element signature="e#45336#46215#0" />
-                <element signature="e#46286#48691#0" />
-                <element signature="e#48766#49476#0" />
-                <element signature="e#49561#49992#0" />
-                <element signature="e#50063#50249#0" />
-                <element signature="e#50315#50529#0" />
-                <element signature="e#50599#50814#0" />
-                <element signature="e#50882#51709#0" />
-                <element signature="e#51823#53051#0" />
-                <element signature="e#53148#56525#0" />
-                <element signature="e#56612#57824#0" />
-                <element signature="e#57908#58405#0" />
-                <element signature="e#58461#59985#0" />
-                <element signature="e#60041#61480#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/games/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="28" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -211,10 +158,7 @@
         <option value="$PROJECT_DIR$/games/admin.py" />
         <option value="$PROJECT_DIR$/users/serializet.py" />
         <option value="$PROJECT_DIR$/users/admin.py" />
-        <option value="$PROJECT_DIR$/users/permissions.py" />
-        <option value="$PROJECT_DIR$/users/urls.py" />
         <option value="$PROJECT_DIR$/games/urls.py" />
-        <option value="$PROJECT_DIR$/games/permissions.py" />
         <option value="$PROJECT_DIR$/dicemania/urls.py" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/services/user.service.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/all-users/all-users.component.html" />
@@ -223,12 +167,15 @@
         <option value="$PROJECT_DIR$/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/ClientApp/src/app/form/user/user.component.ts" />
         <option value="$PROJECT_DIR$/dicemania/settings.py" />
-        <option value="$PROJECT_DIR$/users/serializer.py" />
-        <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/games/models.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/games/views.py" />
+        <option value="$PROJECT_DIR$/users/urls.py" />
+        <option value="$PROJECT_DIR$/users/serializer.py" />
         <option value="$PROJECT_DIR$/games/serializer.py" />
+        <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/games/permissions.py" />
+        <option value="$PROJECT_DIR$/games/views.py" />
+        <option value="$PROJECT_DIR$/users/permissions.py" />
       </list>
     </option>
   </component>
@@ -336,7 +283,7 @@
       <workItem from="1547712046801" duration="36123000" />
       <workItem from="1547758209249" duration="3342000" />
       <workItem from="1547785501649" duration="13811000" />
-      <workItem from="1547874076006" duration="13024000" />
+      <workItem from="1547874076006" duration="17994000" />
     </task>
     <task id="LOCAL-00001" summary="user Authenticate bug fixed&#10;game serializer&#10;game mode serializer">
       <created>1547719345768</created>
@@ -429,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547883940247</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="front-end:&#10;+ best game modes component&#10;back-end: &#10;+ updated games model">
+      <created>1547892637641</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1547892637641</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98461000" />
+    <option name="totallyTimeSpent" value="103431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,13 +400,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26626426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -461,7 +416,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49899396" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49899396" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.501006" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49966466" weight="0.32956153" />
       <window_info anchor="bottom" id="TypeScript" order="14" />
@@ -469,7 +424,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32997987" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15761234" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.15761234" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,14 +443,15 @@
     <MESSAGE value="front-end:&#10;+ comment component&#10;+ comment field component init&#10;+ profile comments list" />
     <MESSAGE value="front-end:&#10;+ login interceptor&#10;+ auth guard&#10;+ redesigned front side&#10;+ game component&#10;+ game design component&#10;+ recode user service&#10;back-end:&#10;+ minor serializer updates" />
     <MESSAGE value="front-end:&#10;+ register user bug fixed&#10;+ get online users" />
-    <option name="LAST_COMMIT_MESSAGE" value="front-end:&#10;+ register user bug fixed&#10;+ get online users" />
+    <MESSAGE value="front-end:&#10;+ best game modes component&#10;back-end: &#10;+ updated games model" />
+    <option name="LAST_COMMIT_MESSAGE" value="front-end:&#10;+ best game modes component&#10;back-end: &#10;+ updated games model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/games/serializer.py</url>
-          <line>94</line>
+          <line>119</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -506,12 +462,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user_images/photo_2018-11-30_19-00-56.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_images/photo_2019-01-06_20-58-57.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -567,13 +517,6 @@
     <entry file="das://d0ceea01-be97-4498-9b28-9efd13aa82f7/schema/main/table/games_gamemode_comment" />
     <entry file="das://d0ceea01-be97-4498-9b28-9efd13aa82f7/schema/main/table/games_gamemode" />
     <entry file="das://eb401b3e-f1ee-4e65-8133-ba854c2e4723/schema/main/table/games_gamemode" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -591,23 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/hashers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -619,16 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/games/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -778,16 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/games/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -798,43 +704,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1598">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/games/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="28" selection-end-column="47" />
+        <state relative-caret-position="-47">
+          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" selection-start-line="23" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#782#1358#0" />
+            <element signature="e#1416#1877#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="838" column="8" selection-start-line="838" selection-start-column="8" selection-end-line="838" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/games/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+        <state relative-caret-position="188">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#1346#1791#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/games/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://132d7814-7acb-4aac-94f0-ca92d9d933dd/schema/main/table/games_game_comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="40" selection-start-line="40" selection-end-line="52" />
+          <folding>
+            <element signature="e#1#57#0" expanded="true" />
+            <element signature="e#604#942#0" />
+            <element signature="e#986#1371#0" />
+            <element signature="e#1428#1601#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/games/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="330">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#793#868#0" />
+            <element signature="e#919#1146#0" />
+            <element signature="e#1454#1634#0" />
+            <element signature="e#1959#2147#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/views.py">
+    <entry file="file://$PROJECT_DIR$/users/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding>
-            <element signature="e#1#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="177">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
         </state>
       </provider>
     </entry>

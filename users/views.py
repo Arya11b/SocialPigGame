@@ -32,14 +32,21 @@ class LoginViewSet(viewsets.ViewSet):
         token = Token.objects.get(key=result.data['token'])
         update_last_login(None, token.user)
         return result
-
-class User_CommentViewSet(viewsets.ModelViewSet):
-    serializer_class = User_CommentSerilizer
-    queryset = User_Comment.objects.all()
-    authentication_classes = (TokenAuthentication,)
-    permission_classes = (permissions.LoggedIn,)
 class User_AddFriendViewSet(viewsets.ModelViewSet):
     serializer_class = FriendSerializer
     queryset = Friends.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.LoggedIn,)
+
+class User_CommentViewSet(viewsets.ModelViewSet):
+    queryset = User_Comment.objects.filter(validated= False)
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (permissions.Admin,)
+    def get_serializer_class(self):
+        if self.request.user.is_staff:
+            return AdminCommentSerializer
+        else: return UserCommentSerilizer
+    def get_queryset(self):
+        if self.request.user.is_staff:
+            return User_Comment.objects.filter(validated= False)
+        else: return User_Comment.objects.filter(validated= True)

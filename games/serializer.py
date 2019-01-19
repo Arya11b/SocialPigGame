@@ -5,7 +5,7 @@ from django.contrib.auth.models import User as UserDetail
 from games.models import *
 
 
-class Game_CommentSerilizer(serializers.ModelSerializer):
+class GameCommentSerilizer(serializers.ModelSerializer):
     comment = Game_Comment
     class Meta:
         model = Game_Comment
@@ -20,7 +20,21 @@ class Game_CommentSerilizer(serializers.ModelSerializer):
         )
         comment.save()
         return comment
-class Game_RatingSerilizer(serializers.ModelSerializer):
+class AdminGameCommentSerilizer(serializers.ModelSerializer):
+    comment = Game_Comment
+    class Meta:
+        model = Game_Comment
+        fields = ('comment_text','game','author','validated','id')
+        read_only_fields = ('author','comment_text','game','id')
+
+        # extra_kwargs =  {'password': {'write-only': True}}
+    def create(self, validated_data):
+        comment = Game_Comment(
+            validated=validated_data['validated'],
+        )
+        comment.save()
+        return comment
+class GameRatingSerilizer(serializers.ModelSerializer):
     rating = Game_Rating
     class Meta:
         model = Game_Rating
@@ -34,8 +48,19 @@ class Game_RatingSerilizer(serializers.ModelSerializer):
         )
         rating.save()
         return rating
-
-class GameMode_CommentSerilizer(serializers.ModelSerializer):
+class AdminGameModeCommentSerilizer(serializers.ModelSerializer):
+    comment = GameMode_Comment
+    class Meta:
+        model = GameMode_Comment
+        fields = ('comment_text', 'game_mode', 'author', 'validated', 'id')
+        read_only_fields = ('author', 'comment_text', 'game_mode', 'id')
+    def create(self, validated_data):
+        comment = GameMode_Comment(
+            validated=validated_data['validated'],
+        )
+        comment.save()
+        return comment
+class GameModeCommentSerilizer(serializers.ModelSerializer):
     comment = GameMode_Comment
     class Meta:
         model = GameMode_Comment
@@ -50,7 +75,7 @@ class GameMode_CommentSerilizer(serializers.ModelSerializer):
         )
         comment.save()
         return comment
-class GameMode_RatingSerilizer(serializers.ModelSerializer):
+class GameModeRatingSerilizer(serializers.ModelSerializer):
     rating = GameMode_Rating
     class Meta:
         model = GameMode_Rating
