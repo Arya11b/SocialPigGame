@@ -19,6 +19,8 @@ class Game(models.Model):
     log = models.TextField()
     player1_score = models.IntegerField()
     player2_score = models.IntegerField()
+    player1_cscore = models.IntegerField(default=0)
+    player2_cscore = models.IntegerField(default=0)
     date = models.DateTimeField(default=now)
     player1 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser,related_name="player1")
     player2 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser,related_name="player2",null=True)
@@ -35,7 +37,6 @@ class Rating(models.Model):
     rate = models.IntegerField()
     rater = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser)
     date = models.DateTimeField(default=now)
-    validated = models.BooleanField(default=False)
 class Game_Comment(Comment):
     game = models.ForeignKey(Game,on_delete=models.CASCADE,default=0)
 class Game_Rating(Rating):

@@ -14,15 +14,15 @@ import {DesignedGamesComponent} from './designed-games/designed-games.component'
 
 const appRoutes: Routes = [
   { path: 'users/all', component: AllUsersComponent},
-  { path: 'game/all', component: AllGamesComponent},
-  {path: 'game/design', component: GameDesignComponent, canActivate: [AuthGuard]},
+  { path: 'game.ts/all', component: AllGamesComponent},
+  {path: 'game.ts/design', component: GameDesignComponent, canActivate: [AuthGuard]},
   // { path: 'all', component: AllUsersComponent, canActivate: [AuthGuard] },
   { path: '', component: HomeComponent},
     { path: 'login', component: LoginComponent },
   { path: 'register', component: SignupComponent },
   { path: 'users/:id', component: ProfileComponent },
-  { path: 'game', component: GameComponent },
-  { path: 'game/modes', component: DesignedGamesComponent },
+  { path: 'game.ts', component: GameComponent },
+  { path: 'game.ts/modes', component: DesignedGamesComponent },
 
     // otherwise redirect to all-users
     { path: '**', redirectTo: '' }

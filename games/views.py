@@ -1,3 +1,4 @@
+from django.db.models import Count
 from rest_framework import generics, viewsets, filters
 from rest_framework.authentication import TokenAuthentication
 from games import permissions
@@ -24,8 +25,6 @@ class GameModeViewSet(viewsets.ModelViewSet):
     queryset = GameMode.objects.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.LoggedIn,)
-    # filter_backends = (filters.SearchFilter,)
-    # search_fields = ("username", "email",)
 class Game_CommentViewSet(viewsets.ModelViewSet):
     serializer_class = Game_CommentSerilizer
     queryset = Game_Comment.objects.all()

@@ -54,8 +54,8 @@ class GameMode_RatingSerilizer(serializers.ModelSerializer):
     rating = GameMode_Rating
     class Meta:
         model = GameMode_Rating
-        fields = ('rate','game_mode')
-        # extra_kwargs =  {'password': {'write-only': True}}
+        fields = ('rate','game_mode','rater','date')
+        read_only_fields = ('rater','date')
     def create(self, validated_data):
         rating = GameMode_Rating(
             rater= User.objects.filter(username=self.context['request'].user)[0],
@@ -69,7 +69,8 @@ class GameSerializer(serializers.ModelSerializer):
     game = Game
     class Meta:
         model = Game
-        fields = ('game_mode',)
+        fields = ('game_mode','id','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','player2','date','done','active')
+        read_only_fields = ('id','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','player2','date','done','active')
         # extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
         game = Game(
@@ -86,7 +87,8 @@ class GameModeSerializer(serializers.ModelSerializer):
     game_mode = GameMode
     class Meta:
         model = GameMode
-        fields = ('name','death_dice','max_score','dice_count','max_dice_role')
+        fields = ('name','death_dice','max_score','dice_count','max_dice_role','id')
+        read_only_fields = ('id',)
         # extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
         print(User.objects.filter(username=self.context['request'].user)[0])
@@ -101,8 +103,4 @@ class GameModeSerializer(serializers.ModelSerializer):
         print(self.context['request'].user)
         game_mode.save()
         return game_mode
-        # user.set_password(validated_data["password"])
-        # user.save()
-        # return user
-
 
