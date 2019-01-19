@@ -37,6 +37,8 @@ class Game_CommentViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         if self.request.user.is_staff:
             return GameMode_Comment.objects.all()
+        else: return Game_Comment.objects.filter(validated=True)
+
 class Game_RatingViewSet(viewsets.ModelViewSet):
     serializer_class = GameRatingSerilizer
     queryset = Game_Rating.objects.all()
@@ -54,6 +56,8 @@ class GameMode_CommentViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         if self.request.user.is_staff:
             return GameMode_Comment.objects.all()
+        else: return GameMode_Comment.objects.filter(validated=True)
+
 class GameMode_RatingViewSet(viewsets.ModelViewSet):
     serializer_class = GameModeRatingSerilizer
     queryset = GameMode_Rating.objects.all()

@@ -54,7 +54,8 @@ class FriendSerializer(serializers.ModelSerializer):
     friend = Friends
     class Meta:
         model = Friends
-        fields = ('following',)
+        fields = ('following','id','follower')
+        read_only_fields = ('follower','id')
         extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
         friend = Friends(

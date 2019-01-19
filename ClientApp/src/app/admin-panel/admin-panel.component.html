@@ -1,0 +1,24 @@
+<mat-card>
+<div *ngFor="let comment of userComment">
+  <mat-label> {{comment.authorname}}</mat-label>
+  <mat-card>{{comment.comment_text}}</mat-card>
+  <button mat-button *ngIf="!comment.validated" (click)="validateUser(comment.id, true)"> Validate </button>
+  <button mat-button *ngIf="comment.validated" (click)="validateUser(comment.id, false)"> Ban </button>
+</div>
+</mat-card>
+<mat-card>
+  <div *ngFor="let comment of modeComment">
+    <mat-label> {{comment.authorname}}</mat-label>
+    <mat-card>{{comment.comment_text}}</mat-card>
+    <button mat-button *ngIf="!comment.validated" (click)="validateMode(comment.id, true)"> Validate </button>
+    <button mat-button *ngIf="comment.validated" (click)="validateMode(comment.id, false)"> Ban </button>
+  </div>
+</mat-card>
+<mat-card>
+  <div *ngFor="let comment of gameComment">
+    <mat-label> {{comment.authorname}}</mat-label>
+    <mat-card>{{comment.comment_text}}</mat-card>
+    <button mat-button *ngIf="!comment.validated" (click)="validateGame(comment.id, true)"> Validate </button>
+    <button mat-button *ngIf="comment.validated" (click)="validateGame(comment.id, false)"> Ban </button>
+  </div>
+</mat-card>

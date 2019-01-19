@@ -1,5 +1,7 @@
 <div *ngIf="user">
-<mat-card>
+  <mat-card>
+    <button class="mat-elevation-z5" *ngIf="!isFriend" (click)="addFriend()" mat-button><mat-icon>add</mat-icon> follow</button>
+    <button class="mat-elevation-z5" *ngIf="isFriend" (click)="removeFriend()" mat-button>unfollow</button>
   <div> {{user.username}}</div>
   <div> {{user.first_name}}</div>
   <div> {{user.last_name}}</div>

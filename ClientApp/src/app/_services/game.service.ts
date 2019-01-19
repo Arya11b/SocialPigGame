@@ -18,7 +18,7 @@ export class GameService {
     return this.http.get<GameMode[]>(`${environment.apiUrl}/games/modes/`);
   }
   getAllModesRatings() {
-    return this.http.get<Rating[]>(`${environment.apiUrl}/games/ratings`);
+    return this.http.get<Rating[]>(`${environment.apiUrl}/games/rating`);
   }
   getModeById(id: number) {
     return this.http.get(`${environment.apiUrl}/games/modes/${id}`);

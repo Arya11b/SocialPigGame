@@ -27,4 +27,13 @@ export class UserService {
     delete(id: number) {
         return this.http.delete(`${environment.apiUrl}/users/profile/${id}`);
     }
+  addFriend(name: any) {
+    return this.http.post(`${environment.apiUrl}/users/friends/`, name);
+  }
+  getFriends() {
+    return this.http.get<any[]>(`${environment.apiUrl}/users/friends/`);
+  }
+  removeFriend(id: number) {
+      return this.http.delete(`${environment.apiUrl}/users/friends/${id}`);
+  }
 }
