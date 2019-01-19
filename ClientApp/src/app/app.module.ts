@@ -28,10 +28,12 @@ import {TextFieldComponent} from './_components/text-field/text-field.component'
 import {DropdownComponent} from './_components/dropdown-multiple/dropdown-multiple.component';
 import {HomeComponent} from './home/home.component';
 import {ToolbarComponent} from './toolbar/toolbar.component';
-import {GameComponent} from './game/game.component';;
-import { GameDesignComponent } from './game-design/game-design.component'
-;
-import { AllGamesComponent } from './all-games/all-games.component'
+import {GameComponent} from './game/game.component';
+import { GameDesignComponent } from './game-design/game-design.component';
+import { AllGamesComponent } from './all-games/all-games.component';
+import { OnlineUsersComponent } from './online-users/online-users.component';
+import {FieldService} from './_services/field.service';;
+import { DesignedGamesComponent } from './designed-games/designed-games.component'
 @NgModule({
     imports: [
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -63,13 +65,16 @@ import { AllGamesComponent } from './all-games/all-games.component'
       GameComponent
 ,
       GameDesignComponent ,
-      AllGamesComponent   ],
+      AllGamesComponent ,
+      OnlineUsersComponent ,
+      DesignedGamesComponent ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend
-        fakeBackendProvider
+        fakeBackendProvider,
+      FieldService
     ],
     bootstrap: [AppComponent]
 })

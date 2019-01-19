@@ -18,11 +18,12 @@
         <!-- <button mat-menu-item (click)="openDialog()">add</button> -->
         <button mat-menu-item routerLink="/" routerLinkActive="hide">Home</button>
         <button mat-menu-item (click)="toggleTheme.emit()">theme</button>
-        <button mat-menu-item routerLink="all-users" routerLinkActive="hide">All Users</button>
+      <button mat-menu-item routerLink="users/all" routerLinkActive="hide">All Users</button>
+      <button mat-menu-item routerLink="game/modes" routerLinkActive="hide">Games</button>
 
     </mat-menu>
     <mat-menu #account="matMenu" >
-        <button mat-menu-item routerLink="sign-up" routerLinkActive="hide">Sign Up</button>
+        <button mat-menu-item routerLink="register" routerLinkActive="hide">Sign Up</button>
         <button mat-menu-item routerLink="login" routerLinkActive="hide">Log In</button>
     </mat-menu>
   </mat-toolbar-row>

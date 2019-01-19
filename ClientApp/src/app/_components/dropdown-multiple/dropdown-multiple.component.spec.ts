@@ -7,7 +7,7 @@ import {HeroProfileComponent} from "../../hero-profile/hero-profile.component";
 import {HeroEditComponent} from "../../hero-edit/hero-edit.component";
 import {SignFormComponent} from "../../sign-form/sign-form.component";
 import {HeroTodoComponent} from "../../hero-todo/hero-todo.component";
-import {HomeComponent} from "../../home/home.component";
+import {AllUsersComponent} from "../../all-users/all-users.component";
 import {AppRoutingModule} from "../../app-routing.module";
 import {MaterialModule} from "../../shared/material.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
@@ -21,7 +21,7 @@ describe('DropdownComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DropdownComponent , MessagesComponent , HeroDetailComponent , HeroProfileComponent , HeroEditComponent , SignFormComponent , HeroTodoComponent , HomeComponent   ],
+      declarations: [ DropdownComponent , MessagesComponent , HeroDetailComponent , HeroProfileComponent , HeroEditComponent , SignFormComponent , HeroTodoComponent , AllUsersComponent   ],
       imports: [AppRoutingModule, MaterialModule, BrowserAnimationsModule, HttpClientModule],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }]

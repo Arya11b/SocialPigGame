@@ -1,5 +1,8 @@
+
+from django.contrib.auth.models import update_last_login
 from rest_framework import generics, viewsets, filters
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from users import permissions
@@ -25,7 +28,10 @@ class LoginViewSet(viewsets.ViewSet):
     serializer_class = AuthTokenSerializer
     def create(self, request):
         """Use the ObtainAuthToken APIView to validate and create a token."""
-        return ObtainAuthToken().post(request)
+        result = ObtainAuthToken().post(request)
+        token = Token.objects.get(key=result.data['token'])
+        update_last_login(None, token.user)
+        return result
 
 class User_CommentViewSet(viewsets.ModelViewSet):
     serializer_class = User_CommentSerilizer

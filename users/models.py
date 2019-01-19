@@ -14,8 +14,8 @@ class User(u):
                                            related_name='follows')
     def set_friends(self):
         self.friends.set([])
-    def __str__(self):
-        return User.username
+    # def __str__(self):
+    #     return User.username
 class DefaultUser(User):
     pass
 class Friends(models.Model):

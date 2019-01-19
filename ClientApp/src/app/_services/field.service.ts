@@ -45,6 +45,27 @@ export class FieldService {
         Validators.email
       ]
     }),
+    new FieldTextBox({
+      key: 'first_name',
+      label: 'First Name',
+      value: '',
+      placeHolder: 'Enter your First Name',
+      order: 3,
+      validators: [
+        Validators.pattern('[A-Za-z0-9]*'),
+
+      ]
+    }),
+    new FieldTextBox({
+      key: 'last_name',
+      label: 'Last Name',
+      value: '',
+      placeHolder: 'Enter your Last Name',
+      order: 3,
+      validators: [
+        Validators.pattern('[A-Za-z0-9]*'),
+      ]
+    }),
 
   ];
   checkPasswords(): boolean {
