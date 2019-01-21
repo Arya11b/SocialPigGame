@@ -7,10 +7,10 @@
       <mat-icon>games</mat-icon>
       Dice Mania
     </span>
-    <span class="spacer"></span>
     <button mat-button [matMenuTriggerFor]="account">
       <mat-icon>account_circle</mat-icon>
     </button>
+    <mat-label *ngIf="currentUser"> hello {{currentUser.username}} !</mat-label>
     <button mat-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
       </button>
@@ -18,13 +18,15 @@
         <!-- <button mat-menu-item (click)="openDialog()">add</button> -->
         <button mat-menu-item routerLink="/" routerLinkActive="hide">Home</button>
         <button mat-menu-item (click)="toggleTheme.emit()">theme</button>
-      <button mat-menu-item routerLink="users/all" routerLinkActive="hide">All Users</button>
-      <button mat-menu-item routerLink="game.ts/modes" routerLinkActive="hide">Games</button>
+      <button mat-menu-item routerLink="/users/all" routerLinkActive="hide">All Users</button>
+      <button mat-menu-item routerLink="/game/modes" routerLinkActive="hide">Games</button>
+      <button mat-menu-item *ngIf="isStaff()" routerLink="/admin" routerLinkActive="hide">Admin panel</button>
 
     </mat-menu>
     <mat-menu #account="matMenu" >
         <button mat-menu-item routerLink="register" routerLinkActive="hide">Sign Up</button>
-        <button mat-menu-item routerLink="login" routerLinkActive="hide">Log In</button>
+        <button mat-menu-item *ngIf="!currentUser" routerLink="login" routerLinkActive="hide">Log In</button>
+        <button mat-menu-item *ngIf="currentUser" (click)="logout()" >Logout</button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

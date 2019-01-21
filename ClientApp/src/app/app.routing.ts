@@ -2,7 +2,6 @@
 
 import { AllUsersComponent } from './all-users';
 import { LoginComponent } from './login';
-import { RegisterComponent } from './register';
 import { AuthGuard } from './_guards';
 import {HomeComponent} from './home/home.component';
 import {ProfileComponent} from './profile/profile.component';

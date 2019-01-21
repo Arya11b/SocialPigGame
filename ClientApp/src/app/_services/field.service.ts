@@ -13,7 +13,6 @@ export class FieldService {
       label: 'User Name',
       value: '',
       placeHolder: 'Enter a Username',
-      icon: 'form-3',
       order: 3,
       validators: [
         Validators.required,
@@ -26,7 +25,6 @@ export class FieldService {
       value: '',
       type:'password',
       placeHolder: 'Choose a password',
-      icon: 'form-3',
       order: 3,
       validators: [
         Validators.required,
@@ -38,7 +36,6 @@ export class FieldService {
       label: 'Email',
       value: '',
       placeHolder: 'Enter your Email',
-      icon: 'form-3',
       order: 3,
       validators: [
         Validators.required,
@@ -53,7 +50,6 @@ export class FieldService {
       order: 3,
       validators: [
         Validators.pattern('[A-Za-z0-9]*'),
-
       ]
     }),
     new FieldTextBox({
@@ -65,8 +61,7 @@ export class FieldService {
       validators: [
         Validators.pattern('[A-Za-z0-9]*'),
       ]
-    }),
-
+    })
   ];
   checkPasswords(): boolean {
     console.log(this.fields);

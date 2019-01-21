@@ -23,7 +23,7 @@ export class AdminPanelComponent implements OnInit {
     this.getUserComments();
     this.getModeComments();
   }
-  private getUserComments(){
+  private getUserComments() {
     this.commentService.getUserComment().subscribe(
       data => {
         this.userComment = data;
@@ -35,7 +35,7 @@ export class AdminPanelComponent implements OnInit {
     );
 
   }
-  private getModeComments(){
+  private getModeComments() {
     this.commentService.getGameModeComment().subscribe(
       data => {
         this.modeComment = data;

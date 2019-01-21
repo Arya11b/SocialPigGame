@@ -1,6 +1,6 @@
 ﻿<h3>All registered users:</h3>
-<ul>
-    <li class="mat-elevation-z5" *ngFor="let user of users">
+<mat-list class="pointer">
+    <mat-list-item class="mat-elevation-z5 pointer" *ngFor="let user of users" routerLink="/users/{{user.id}}">
         {{user.username}} ({{user.first_name}} {{user.last_name}})
-    </li>
-</ul>
+    </mat-list-item>
+</mat-list>

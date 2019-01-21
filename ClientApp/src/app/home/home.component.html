@@ -1,8 +1,16 @@
 <h1>{{homeText}}</h1>
 <div>
   <p>
-    blah blah blah
+    Welcome To Dice Mania Here You can enjoy playing the boring awful piggy game! so let' start
   </p>
-  <app-online-users></app-online-users>
+  <div>
+    <app-online-users></app-online-users>
+  </div>
+  <div *ngIf="currentUser">
+    <app-online-friends></app-online-friends>
+  </div>
   <app-best-game-modes></app-best-game-modes>
+  <div *ngIf="currentUser">
+    <app-mini-profile [currentUser]="currentUser"></app-mini-profile>
+  </div>
 </div>

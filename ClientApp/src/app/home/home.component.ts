@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MenuComponent} from "../menu/menu.component";
+import {AuthenticationService} from '../_services';
+import {User} from '../_models';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,14 @@ import {MenuComponent} from "../menu/menu.component";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {
+  currentUser: User;
+  constructor(private authenticationService: AuthenticationService) {
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
   ngOnInit() {
   }
   get homeText() {
-    return 'this is home';
+    return 'Dice Mania';
   }
 
 }

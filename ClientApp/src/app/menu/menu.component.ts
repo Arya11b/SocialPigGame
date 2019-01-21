@@ -1,6 +1,8 @@
 import {Component, EventEmitter, NgZone, OnInit, Output, ViewChild} from '@angular/core';
-import {Router} from "@angular/router";
-import {MatSidenav} from "@angular/material";
+import {Router} from '@angular/router';
+import {MatSidenav} from '@angular/material';
+import {AuthenticationService} from '../_services';
+import {User} from '../_models';
 const SMALL_SCREEN_BREAKPOINT = 720;
 @Component({
   selector: 'app-menu',
@@ -9,10 +11,12 @@ const SMALL_SCREEN_BREAKPOINT = 720;
 })
 export class MenuComponent implements OnInit {
   isAlternateTheme = false;
+  currentUser: User;
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_SCREEN_BREAKPOINT}px)`);
-  constructor( private router: Router) {
-  }
   @ViewChild(MatSidenav) sidenav: MatSidenav;
+  constructor(private router: Router, private authenticationService: AuthenticationService){
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+  }
   ngOnInit() {
     this.router.events.subscribe(() => {
       if(this.isScreenSmall())

@@ -3,7 +3,8 @@
     <mat-toolbar color="accent" class="bar-sidenav-title">tt</mat-toolbar>
   </mat-sidenav>
   <div class="bar-sidenav-content">
-    <app-toolbar (toggleSideNav)="sidenav.toggle()" (toggleRtl)="toggleRtl()" (toggleTheme)="toggleTheme()"></app-toolbar>
+    <app-toolbar [currentUser] = currentUser (toggleSideNav)="sidenav.toggle()" (toggleRtl)="toggleRtl()" (toggleTheme)="toggleTheme()"></app-toolbar>
+    <alert></alert>
     <mat-card class="sec mat-elevation-z8">
       <router-outlet></router-outlet>
     </mat-card>

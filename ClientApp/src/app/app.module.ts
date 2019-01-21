@@ -11,7 +11,6 @@ import {AlertComponent} from './_components';
 import {JwtInterceptor, ErrorInterceptor} from './_helpers';
 import {AllUsersComponent} from './all-users';
 import {LoginComponent} from './login';
-import {RegisterComponent} from './register';
 import {SignupComponent} from './signup/signup.component';
 import {CommentComponent} from './comment/comment.component';
 import {CommentFieldComponent} from './comment-field/comment-field.component';
@@ -34,6 +33,9 @@ import {FieldService} from './_services/field.service';
 import {DesignedGamesComponent} from './designed-games/designed-games.component';
 import {BestGameModesComponent} from './best-game-modes/best-game-modes.component';
 import {AdminPanelComponent} from './admin-panel/admin-panel.component';
+import { OnlineFriendsComponent } from './online-friends/online-friends.component';
+import {MenuComponent} from './menu/menu.component';
+import { MiniProfileComponent } from './mini-profile/mini-profile.component';
 
 @NgModule({
   imports: [
@@ -51,7 +53,6 @@ import {AdminPanelComponent} from './admin-panel/admin-panel.component';
     AlertComponent,
     AllUsersComponent,
     LoginComponent,
-    RegisterComponent,
     SignupComponent,
     CommentComponent,
     CommentFieldComponent,
@@ -69,8 +70,10 @@ import {AdminPanelComponent} from './admin-panel/admin-panel.component';
     OnlineUsersComponent,
     DesignedGamesComponent,
     AdminPanelComponent,
-    BestGameModesComponent
-  ],
+    MenuComponent,
+    BestGameModesComponent,
+    MiniProfileComponent,
+    OnlineFriendsComponent],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},

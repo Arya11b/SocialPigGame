@@ -7,6 +7,10 @@ import {first} from 'rxjs/operators';
 import {Router} from '@angular/router';
 import {AlertService, AuthenticationService} from '../_services';
 
+class ImageSnippet {
+    constructor(public src: string, public file: File) {}
+}
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -18,6 +22,7 @@ export class SignupComponent implements OnInit {
   submitted = false;
   // migrate to all users page
   user: User;
+  selectedFile: ImageSnippet;
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
@@ -36,15 +41,28 @@ export class SignupComponent implements OnInit {
   disableSubmit(): boolean {
     return this.userForm.invalid;
   }
-
+  processFile(imageInput: any) {
+    console.log('changed');
+    const file: File = imageInput.files[0];
+    const reader = new FileReader();
+    console.log(    reader.readAsDataURL(file));
+    //
+    reader.addEventListener('load', (event: any) => {
+      this.selectedFile = new ImageSnippet(event.target.result, file);
+    console.log(event.target.result);
+  });
+  }
   onSubmit() {
-    console.log(this.userForm.value.userName);
+    // console.log(this.selectedFile.src);
     this.user.username = this.userForm.value.userName;
     this.user.password = this.userForm.value.password;
     this.user.first_name = this.userForm.value.first_name;
     this.user.last_name = this.userForm.value.last_name;
     // this.user.picture = '';
     this.user.email = this.userForm.value.email;
+    if (this.selectedFile) {
+      this.user.picture = this.selectedFile.src;
+    }
     this.userService.register(this.user).pipe(first())
       .subscribe(
         data => {

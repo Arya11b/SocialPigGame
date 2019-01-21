@@ -9,6 +9,5 @@ export class FieldDate extends FieldBase<string> {
   constructor(options: {} = {}) {
     super(options);
     this.type = options['type'] || '';
-    console.log('type' + this.type);
   }
 }

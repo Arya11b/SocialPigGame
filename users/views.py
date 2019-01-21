@@ -35,7 +35,7 @@ class LoginViewSet(viewsets.ViewSet):
         user = User.objects.filter(pk= token.user_id)[0]
         update_last_login(None, token.user)
         # return result
-        return Response({'token': token.key, 'id': token.user_id, 'username': user.username, 'first_name': user.first_name, 'last_name': user.last_name})
+        return Response({'token': token.key, 'id': token.user_id, 'username': user.username, 'first_name': user.first_name, 'last_name': user.last_name, 'is_staff': user.is_staff})
 class User_AddFriendViewSet(viewsets.ModelViewSet):
     serializer_class = FriendSerializer
     queryset = Friends.objects.all()
@@ -46,6 +46,9 @@ class User_CommentViewSet(viewsets.ModelViewSet):
     queryset = User_Comment.objects.filter(validated= True)
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.Admin,)
+
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ("on_user__id",)
     def get_serializer_class(self):
         if self.request.user.is_staff:
             return AdminCommentSerializer
