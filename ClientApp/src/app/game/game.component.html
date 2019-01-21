@@ -1,26 +1,27 @@
 <mat-card class="mat-elevation-z8">
     <div class="player" id="player-sec1">
-        <div class="player-name" id="p1-name">Player 1 </div>
-        <div class="player-score" id="score1">0</div>
+        <div class="player-name" id="p1-name">{{name1()}}</div>
+        <div class="player-score" id="score1">{{game.player1_score}}</div>
         <div class="red-wrapper">
             <div class="red-label">Current</div>
-            <div class="red-score" id="current1">0</div>
+            <div class="red-score" id="current1">{{game.player1_cscore}}</div>
         </div>
     </div>
 
     <div class="player" id="player-sec2">
-        <div class="player-name" id="p2-name">Player 2</div>
-        <div class="player-score" id="score2">0</div>
+        <div class="player-name" id="p2-name">{{name2()}}</div>
+        <div class="player-score" id="score2">{{game.player2_score}}</div>
         <div class="red-wrapper">
             <div class="red-label">Current</div>
-            <div class="red-score" id="current2">0</div>
+            <div class="red-score" id="current2">{{game.player2_cscore}}</div>
         </div>
     </div>
 
     <!-- <button class="btn-newgame" id="new"><mat-icon>add</mat-icon>New game.ts</button> -->
-    <button class="btn-roll" id="roll"><mat-icon>refresh</mat-icon>Roll dice</button>
-    <button class="btn-hold" id="hold"><mat-icon>remove</mat-icon>Hold</button>
-    <input class="inp-score" id="input" placeholder="score"/>
-    <!-- <img id="dice" [src]="../app/shared/img/dice-2.png" alt="dice" class="dice"> -->
+    <button mat-button (click)="roll()" class="btn-roll" id="roll" [disabled]="!isturn()"><mat-icon>refresh</mat-icon>Roll dice</button>
+    <button class="btn-hold" id="hold" mat-button (click)="hold()" [disabled]="!isturn()"><mat-icon>remove</mat-icon>Hold</button>
+    <!--<input class="inp-score" id="input" placeholder="score"/>-->
+     <!--<img id="dice" src="../app/shared/img/dice-2.png" alt="dice" class="dice">-->
+    <img id="dice0" class="dice" src="{{'/assets/img/dice-' + getDiceNo() + '.png'}}" alt="omg">
     <!-- <img id="dice2" [src="dice3"] alt="dice2" class="dice2"> -->
 </mat-card>

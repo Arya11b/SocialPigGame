@@ -1,7 +1,10 @@
 import datetime
+import random
 
 from rest_framework import serializers
 from django.contrib.auth.models import User as UserDetail
+from rest_framework.utils import model_meta
+
 from games.models import *
 
 
@@ -89,25 +92,91 @@ class GameModeRatingSerilizer(serializers.ModelSerializer):
         )
         rating.save()
         return rating
-
 class GameSerializer(serializers.ModelSerializer):
     game = Game
     class Meta:
         model = Game
         fields = ('game_mode','id','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','player2','date','done','active')
-        read_only_fields = ('id','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','player2','date','done','active')
+        read_only_fields = ('id','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','date','done','active')
         # extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
         game = Game(
             active= True,
             player1_score=0,
             player2_score=0,
+            player1_cscore=0,
+            player2_cscore=0,
             player1= User.objects.filter(username=self.context['request'].user)[0],
-            # player2= User.objects.filter(username=self.context['request'].user)[0],
-            game_mode= GameMode.objects.filter(name=validated_data['game_mode'])[0]
+            player2= User.objects.filter(pk=self.context['request'].data['player2'])[0],
+            game_mode= GameMode.objects.filter(pk=self.context['request'].data['game_mode'])[0],
         )
+        if self.context['request'].data['log'] == 0:
+            print('something something something')
+        if game.player2:
+            game.active = False
+        if len(game.log) > 0 :
+            if int(game.log[-1]) == 1:
+                game.player1_cscore += random.randint(1,6)
+            elif int(game.log[-1]) == 2:
+                game.player2_cscore += random.randint(1, 6)
         game.save()
         return game
+    def update(self, instance, validated_data):
+        info = model_meta.get_field_info(instance)
+        for attr, value in validated_data.items():
+            if attr in info.relations and info.relations[attr].to_many:
+                field = getattr(instance, attr)
+                field.set(value)
+            else:
+                setattr(instance, attr, value)
+        gm = getattr(instance,'game_mode')
+        p1 = getattr(instance,'player1')
+        p2 = getattr(instance,'player2')
+        if self.context['request'].data['log'] ==  0 and getattr(instance,'log')=='':
+            setattr(instance,'log','1')
+        turn = getattr(instance,'log')
+        print(turn)
+        if self.context['request'].data['log'] == 1  and turn == '1':
+            print('b')
+            cscore = getattr(instance,'player1_cscore')
+            r = random.randint(1,6)
+            if r == gm.death_dice:
+                setattr(instance,'player1_cscore',0)
+                setattr(instance, 'log', '2')
+            else:
+                setattr(instance,'player1_cscore',r + cscore)
+        elif self.context['request'].data['log'] == 2  and turn == '2':
+            print('b')
+            cscore = getattr(instance,'player2_cscore')
+            r = random.randint(1,6)
+            if r == gm.death_dice:
+                setattr(instance,'player2_cscore',0)
+                setattr(instance, 'log', '1')
+            else:
+                setattr(instance,'player2_cscore',r + cscore)
+        elif self.context['request'].data['log'] == 3  and turn == '1':
+            print('b')
+            cscore = getattr(instance, 'player1_cscore')
+            score = getattr(instance, 'player1_score')
+            setattr(instance, 'player1_score', cscore + score)
+            setattr(instance, 'player1_cscore', 0)
+            setattr(instance,'log','2')
+            if getattr(instance,'player1_score') >= gm.max_score:
+                setattr(instance, 'log', '3')
+
+        elif self.context['request'].data['log'] == 4  and turn == '2':
+            print('b')
+            cscore = getattr(instance, 'player2_cscore')
+            score = getattr(instance, 'player2_score')
+            setattr(instance, 'player2_score', cscore + score)
+            setattr(instance, 'player2_cscore', 0)
+            setattr(instance, 'log', '1')
+            if getattr(instance, 'player2_score') >= gm.max_score:
+                setattr(instance, 'log', '4')
+        instance.save()
+
+        return instance
+
 class GameModeSerializer(serializers.ModelSerializer):
     game_mode = GameMode
     class Meta:

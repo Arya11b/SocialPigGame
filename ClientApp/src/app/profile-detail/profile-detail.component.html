@@ -1,0 +1,30 @@
+
+<mat-card class="mat-elevation-z10 contact-card">
+  <div class="card-col">
+    <!--<mat-icon mat-card-avatar svgIcon="{{hero.picture}}" class="hero-pic-large"></mat-icon>-->
+    <div>
+      <mat-card-title class="name">{{currentUser.first_name | uppercase}} {{currentUser.last_name | uppercase }}</mat-card-title>
+      <mat-card-subtitle class="alias"> Username: <span>{{currentUser.username | uppercase}}</span>
+      </mat-card-subtitle>
+    </div>
+  </div>
+  <div class="card-col">
+
+    <mat-card>
+      {{currentUser.email}}
+    </mat-card>
+    <mat-card>
+      Member Since {{currentUser.date_joined | date}}
+    </mat-card>
+    <div *ngIf="currentUser.is_staff">
+      <mat-card>
+      Staff member
+      </mat-card>
+    </div>
+  </div>
+  <div class="mini-button">
+    <!--<button matLine [routerLink]="['/hero',hero.id,'edit']" class="mini-button">-->
+      <!--<mat-icon>edit</mat-icon>-->
+    <!--</button>-->
+  </div>
+</mat-card>

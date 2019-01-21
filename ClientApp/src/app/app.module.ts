@@ -35,6 +35,9 @@ import { OnlineFriendsComponent } from './online-friends/online-friends.componen
 import {MenuComponent} from './menu/menu.component';
 import { MiniProfileComponent } from './mini-profile/mini-profile.component';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+import { MiniGamemodeComponent } from './mini-gamemode/mini-gamemode.component';
+import { DesignFormComponent } from './form/design-form/design-form.component';
+import { GamesHubComponent } from './games-hub/games-hub.component';
 
 @NgModule({
   imports: [
@@ -73,8 +76,10 @@ import { ProfileDetailComponent } from './profile-detail/profile-detail.componen
     BestGameModesComponent,
     MiniProfileComponent,
     ProfileDetailComponent,
-    OnlineFriendsComponent
-  ],
+    OnlineFriendsComponent,
+    MiniGamemodeComponent ,
+    GamesHubComponent,
+    DesignFormComponent],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},

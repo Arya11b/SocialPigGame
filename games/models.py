@@ -12,7 +12,7 @@ class GameMode(models.Model):
     dice_count = models.IntegerField(default=1)
     max_dice_role = models.IntegerField(default=-1)
     date = models.DateTimeField(default=now)
-    creator = models.ForeignKey(User,on_delete=models.CASCADE,default=0)
+    creator = models.ForeignKey(User,on_delete=models.CASCADE)
     def __str__(self):
         return self.name
 class Game(models.Model):
@@ -22,8 +22,8 @@ class Game(models.Model):
     player1_cscore = models.IntegerField(default=0)
     player2_cscore = models.IntegerField(default=0)
     date = models.DateTimeField(default=now)
-    player1 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=0,related_name="player1")
-    player2 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=0,related_name="player2",null=True)
+    player1 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser,related_name="player1")
+    player2 = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser,related_name="player2",null=True)
     game_mode = models.ForeignKey(GameMode,on_delete=models.SET_DEFAULT,default=0,related_name="mode")
     done = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
@@ -35,7 +35,7 @@ class Game(models.Model):
         return self.id_hash
 class Rating(models.Model):
     rate = models.IntegerField()
-    rater = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=0)
+    rater = models.ForeignKey(User,on_delete=models.SET_DEFAULT,default=DefaultUser)
     date = models.DateTimeField(default=now)
 class Game_Comment(Comment):
     game = models.ForeignKey(Game,on_delete=models.CASCADE,default=0)

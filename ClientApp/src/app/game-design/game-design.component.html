@@ -1,3 +1,11 @@
-<p>
-  game-design works!
-</p>
+<h1 mat-dialog-title>
+  Design a game
+</h1>
+<mat-dialog-content>
+  <mat-card class="mat-elevation-z10">
+    <app-design-form [designForm]="designForm"></app-design-form>
+    <button class="forms-button" routerLink="/all-users" [disabled]="disableSubmit()" (click)="onSubmit()" mat-button>register
+    </button>
+  </mat-card>
+
+</mat-dialog-content>

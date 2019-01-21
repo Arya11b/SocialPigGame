@@ -35,4 +35,14 @@ export class GameService {
   deleteMode(id: number) {
     return this.http.delete(`${environment.apiUrl}/games/modes/${id}`);
   }
+  registerGame(game: Game) {
+    return this.http.post(`${environment.apiUrl}/games/active/`, game);
+  }
+  updateGame(game: any){
+    return this.http.put(`${environment.apiUrl}/games/active/${game.id}/`, game);
+  }
+  getGameById(id: number){
+    return this.http.get<Game>(`${environment.apiUrl}/games/active/${id}/`);
+  }
+
 }

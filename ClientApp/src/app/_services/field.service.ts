@@ -63,10 +63,60 @@ export class FieldService {
       ]
     })
   ];
-  checkPasswords(): boolean {
-    console.log(this.fields);
-    return true;
-  }
+  public modeFields: FieldBase<any>[] = [
+    new FieldTextBox({
+      key: 'name',
+      label: 'Name',
+      value: '',
+      placeHolder: 'Enter your game name',
+      validators: [
+        Validators.required,
+        Validators.pattern('[A-Za-z0-9]*')
+      ]
+    }),
+    new FieldTextBox({
+      key: 'death_dice',
+      label: 'Death Dice',
+      value: '',
+      placeHolder: 'enter the number of death dice',
+      order: 3,
+      validators: [
+        Validators.required,
+        Validators.pattern('[1-6]'),
+      ]
+    }),
+    new FieldTextBox({
+      key: 'max_score',
+      label: 'Winning score',
+      value: '',
+      placeHolder: 'Set the Winning score',
+      order: 3,
+      validators: [
+        Validators.required,
+        Validators.pattern('[0-9]*')
+      ]
+    }),
+    new FieldTextBox({
+      key: 'dice_count',
+      label: 'Dice Count',
+      value: '',
+      placeHolder: 'Enter the number of dices',
+      order: 3,
+      validators: [
+        Validators.pattern('[1-2]'),
+      ]
+    }),
+    new FieldTextBox({
+      key: 'max_dice_role',
+      label: 'Max dice role',
+      value: '',
+      placeHolder: 'Enter the number of max dice role',
+      order: 3,
+      validators: [
+        Validators.pattern('[0-9]*'),
+      ]
+    })
+  ];
   public loginFields: FieldBase<any>[] = [
     new FieldTextBox({
       key: 'userName',

@@ -1,6 +1,7 @@
 import {User} from './user';
 
 export class Game {
+  id: number;
   log: string;
   player1_score : number;
   player2_score : number;

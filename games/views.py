@@ -11,9 +11,10 @@ class GetActiveGames(generics.ListCreateAPIView):
 class GameViewSet(viewsets.ModelViewSet):
     """Handles creating and updating profiles"""
     serializer_class = GameSerializer
-    queryset = Game.objects.filter(active=True)
-    # authentication_classes = (TokenAuthentication,)
-    # permission_classes = (permissions.UpdateOwnProfile,)
+    queryset = Game.objects.all()
+    authentication_classes = (TokenAuthentication,)
+    # permission_classes = (permissions.LoggedIn,)
+
     # filter_backends = (filters.SearchFilter,)
     # search_fields = ("username", "email",)
 class GetGameModes(generics.ListCreateAPIView):

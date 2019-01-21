@@ -1,3 +1,8 @@
-<p>
-  designed-games works!
-</p>
+<div *ngFor="let gameMode of gameModes">
+  <mat-card >
+  <app-mini-gamemode [gameMode]="gameMode"></app-mini-gamemode>
+  <mat-card>
+  <button mat-button class="mat-elevation-z5" > start Game! </button>
+  </mat-card>
+  </mat-card>
+</div>

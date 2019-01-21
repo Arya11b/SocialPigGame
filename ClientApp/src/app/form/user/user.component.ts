@@ -5,7 +5,7 @@ import {FieldService} from "../../_services/field.service";
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  styleUrls: []
 })
 export class UserComponent implements OnInit {
   @Input() userForm: FormGroup;
