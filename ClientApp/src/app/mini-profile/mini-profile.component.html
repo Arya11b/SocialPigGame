@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title> User Summary</mat-card-title>
+  <div>
+  {{currentUser.username}}
+</div>
+<div>
+  {{currentUser.first_name}}
+</div>
+  <div>
+    {{currentUser.last_name}}
+  </div>
+
+  <div>
+    {{currentUser.email}}
+  </div>
+  <div *ngIf="currentUser.is_staff">
+    Staff member
+  </div>
+  <button routerLink="/profile" mat-button> full profile page</button>
+</mat-card>

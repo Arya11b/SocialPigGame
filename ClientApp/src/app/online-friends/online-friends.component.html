@@ -1,0 +1,9 @@
+<h3>online Friends:</h3>
+<mat-card>
+  <mat-list>
+    <mat-list-item class="mat-elevation-z5" *ngFor="let user of users">
+      {{user.username}} ({{user.first_name}} {{user.last_name}})
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+

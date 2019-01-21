@@ -11,6 +11,7 @@ import {GameDesignComponent} from './game-design/game-design.component';
 import {SignupComponent} from './signup/signup.component';
 import {DesignedGamesComponent} from './designed-games/designed-games.component';
 import {AdminPanelComponent} from './admin-panel/admin-panel.component';
+import {ProfileDetailComponent} from './profile-detail/profile-detail.component';
 
 const appRoutes: Routes = [
   { path: 'users/all', component: AllUsersComponent},
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'register', component: SignupComponent },
   { path: 'users/:id', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'game', component: GameComponent },
+  { path: 'profile', component: ProfileDetailComponent, canActivate: [AuthGuard] },
   { path: 'game/modes', component: DesignedGamesComponent },
 
     // otherwise redirect to all-users

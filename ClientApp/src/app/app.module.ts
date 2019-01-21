@@ -2,8 +2,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-
-// used to create fake backend
 import {fakeBackendProvider} from './_helpers';
 import {AppComponent} from './app.component';
 import {routing} from './app.routing';
@@ -36,6 +34,7 @@ import {AdminPanelComponent} from './admin-panel/admin-panel.component';
 import { OnlineFriendsComponent } from './online-friends/online-friends.component';
 import {MenuComponent} from './menu/menu.component';
 import { MiniProfileComponent } from './mini-profile/mini-profile.component';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 
 @NgModule({
   imports: [
@@ -73,7 +72,9 @@ import { MiniProfileComponent } from './mini-profile/mini-profile.component';
     MenuComponent,
     BestGameModesComponent,
     MiniProfileComponent,
-    OnlineFriendsComponent],
+    ProfileDetailComponent,
+    OnlineFriendsComponent
+  ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},

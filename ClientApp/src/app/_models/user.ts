@@ -9,4 +9,5 @@
     token: string;
     last_login: string;
     is_staff: boolean;
+    date_joined: string
 }

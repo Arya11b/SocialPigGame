@@ -35,7 +35,10 @@ class LoginViewSet(viewsets.ViewSet):
         user = User.objects.filter(pk= token.user_id)[0]
         update_last_login(None, token.user)
         # return result
-        return Response({'token': token.key, 'id': token.user_id, 'username': user.username, 'first_name': user.first_name, 'last_name': user.last_name, 'is_staff': user.is_staff})
+        return Response({'token': token.key, 'id': token.user_id, 'username': user.username,
+                         'first_name': user.first_name, 'last_name': user.last_name,
+                         'is_staff': user.is_staff , 'email': user.email,
+                         'date_joined': user.date_joined})
 class User_AddFriendViewSet(viewsets.ModelViewSet):
     serializer_class = FriendSerializer
     queryset = Friends.objects.all()
