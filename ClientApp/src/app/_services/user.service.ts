@@ -19,6 +19,9 @@ export class UserService {
     register(user: User) {
         return this.http.post(`${environment.apiUrl}/users/profile/`, user);
     }
+  postComment(comment: any) {
+    return this.http.post(`${environment.apiUrl}/users/comment/`, comment);
+  }
 
     update(user: User) {
         return this.http.put(`${environment.apiUrl}/users/profile/${user.id}`, user);
@@ -35,5 +38,8 @@ export class UserService {
   }
   removeFriend(id: number) {
       return this.http.delete(`${environment.apiUrl}/users/friends/${id}`);
+  }
+  getUserComments(){
+      return this.http.get<any[]>(`${environment.apiUrl}/users/comment/`);
   }
 }

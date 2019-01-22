@@ -1,0 +1,102 @@
+.hero-pic-large {
+  border: 2px solid darkslateblue;
+  width: 134px;
+  height: 134px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  background: ghostwhite;
+  vertical-align: middle;
+}
+
+.contact-card {
+  margin: auto;
+  display: flex;
+  max-width: 60%;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mini-card{
+  margin: 1%;
+}
+
+.info {
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.name {
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.alias {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-item {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
+
+span.card-item {
+  font-weight: bolder;
+  margin: auto;
+  padding: auto;
+  white-space: nowrap;
+}
+
+div.mini-button {
+  display: flex;
+  align-content: flex-end;
+}
+
+.mini-button {
+  background: none;
+  border: none;
+  color: whitesmoke;
+  margin: auto;
+}
+
+mat-icon.mini-button {
+}
+
+.card-row {
+  margin: 4%;
+  display: flex;
+  max-width: 80%;
+  width: 80%;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-col {
+  margin: 4%;
+  display: flex;
+  max-width: 80%;
+  width: 80%;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-label{
+  font-size: 30px;
+  font-weight: bolder;
+  align-items: center;
+}
+.tab-label{
+  font-size: 30px;
+
+}

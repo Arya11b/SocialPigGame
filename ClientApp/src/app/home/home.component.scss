@@ -1,21 +1,29 @@
 .flex-container{
   display: flex;
-  flex-flow: column wrap;
+  margin: 30px;
+  //flex-flow: column wrap;
   /* or
   flex-direction: row;
   flex-wrap: wrap
   */
+}
+.flex-column{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 30px;
+
 }
 @media all and (max-width: 800px){
   .flex-container{
     justify-content: flex-start;
   }
 }
+.flex-row{
+  flex: 1;
+}
 .flex-item{
   height: 150px;
   width: 200px;
-  background: black;
-  color: yellow;
   font-size: 4em;
   font-weight: bold;
   text-align: center;

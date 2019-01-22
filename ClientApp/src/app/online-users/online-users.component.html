@@ -1,7 +1,7 @@
-<h3>All online users:</h3>
-<mat-card>
+<mat-card class="mar mat-elevation-z5">
+<mat-card-title class="bigger">All online users:</mat-card-title>
 <mat-list>
-  <mat-list-item class="mat-elevation-z5" *ngFor="let user of users">
+  <mat-list-item  *ngFor="let user of users">
     {{user.username}} ({{user.first_name}} {{user.last_name}})
   </mat-list-item>
 </mat-list>

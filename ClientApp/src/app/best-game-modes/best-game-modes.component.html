@@ -1,21 +1,25 @@
-<mat-card>
-  <div> top rated Games</div>
+<div class="flex-container">
+<mat-card class="mar mat-elevation-z5">
+  <mat-card-title> top rated Games</mat-card-title>
   <div *ngFor="let mode of modeRates">
-  <div> {{mode.name}}</div>
-  <div> {{mode.rate}}</div>
+  <mat-card-subtitle class="emph"> {{mode.name | uppercase}}</mat-card-subtitle>
+    <mat-progress-bar mode="determinate" value="{{mode.rate * 20}}" color="warn"></mat-progress-bar>
+  <mat-card-content> {{mode.rate}}</mat-card-content>
 </div>
 </mat-card>
-<mat-card>
-  <div> most played Games</div>
+<mat-card class="mar mat-elevation-z5">
+  <mat-card-title> Most played Games </mat-card-title>
   <div *ngFor="let mode of modeCount">
-    <div> {{mode.name}}</div>
-    <div> {{mode.count}}</div>
+    <mat-card-subtitle class="emph"> {{mode.name | uppercase}}</mat-card-subtitle>
+    <mat-card-content> {{mode.count}}</mat-card-content>
   </div>
 </mat-card>
-<mat-card>
-  <div> newest top rated Games</div>
+<mat-card class="mar mat-elevation-z5">
+  <mat-card-title> Newest Top rated Games</mat-card-title>
   <div *ngFor="let mode of newModeRates">
-    <div> {{mode.name}}</div>
-    <div> {{mode.rate}}</div>
+    <mat-card-subtitle class="emph"> {{mode.name | uppercase}}</mat-card-subtitle>
+    <mat-progress-bar mode="determinate" value="{{mode.rate * 20}}" color="warn"></mat-progress-bar>
+    <mat-card-content> {{mode.rate}}</mat-card-content>
   </div>
 </mat-card>
+</div>

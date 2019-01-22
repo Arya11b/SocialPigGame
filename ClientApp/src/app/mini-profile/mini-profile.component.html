@@ -1,20 +1,19 @@
 <mat-card>
-  <mat-card-title> User Summary</mat-card-title>
-  <div>
+  <mat-card-title class="biggger"> User Summary</mat-card-title>
+  <mat-card-subtitle class="bigger">
   {{currentUser.username}}
-</div>
-<div>
-  {{currentUser.first_name}}
-</div>
-  <div>
-    {{currentUser.last_name}}
-  </div>
+</mat-card-subtitle>
+<mat-card-content class="big">
+  {{currentUser.first_name}}     {{currentUser.last_name}}
 
-  <div>
+</mat-card-content>
+  <div class="big">
     {{currentUser.email}}
   </div>
   <div *ngIf="currentUser.is_staff">
+    <mat-card-footer class="big">
     Staff member
+    </mat-card-footer>
   </div>
-  <button routerLink="/profile" mat-button> full profile page</button>
+  <button routerLink="/profile" class="mat-elevation-z5" color="accent" mat-button> full profile page</button>
 </mat-card>
