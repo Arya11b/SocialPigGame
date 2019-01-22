@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>Game Hub</mat-card-title>
+  <div *ngIf="addedGame">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div *ngFor="let gameMode of gameModes">
+  <mat-card >
+    <app-mini-gamemode [gameMode]="gameMode"></app-mini-gamemode>
+    <mat-card>
+      <button mat-button class="mat-elevation-z5" (click)="addGame(gameMode)"> start Game! </button>
+    </mat-card>
+  </mat-card>
+</div>
+</mat-card>
+<div *ngFor="let game of games">
+<mat-card>
+  <mat-card-title> mode: {{getGameMode(game.game_mode).name}}</mat-card-title>
+  <mat-card-subtitle> opponent:  {{getUser(game.player1).username}}</mat-card-subtitle>
+  <button mat-button routerLink="/game/{{game.id}}" class="mat-elevation-z5"> start Game </button>
+</mat-card>
+</div>

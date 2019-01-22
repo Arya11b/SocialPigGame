@@ -13,4 +13,5 @@ export class Game {
   game_mode : number;
   done: boolean;
   active: boolean;
+  dice: string = '[]';
 }

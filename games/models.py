@@ -1,5 +1,6 @@
 import hashlib
 
+from django.core.validators import int_list_validator
 from django.db import models
 from django.utils.timezone import now
 from django.contrib.auth.models import AnonymousUser
@@ -27,6 +28,7 @@ class Game(models.Model):
     game_mode = models.ForeignKey(GameMode,on_delete=models.SET_DEFAULT,default=0,related_name="mode")
     done = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
+    dice = models.CharField(validators=[int_list_validator],max_length=255,default=1)
     @property
     def id_hash(self):
         return hashlib.md5(str(self.id).encode('utf8')).hexdigest()

@@ -96,8 +96,8 @@ class GameSerializer(serializers.ModelSerializer):
     game = Game
     class Meta:
         model = Game
-        fields = ('game_mode','id','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','player2','date','done','active')
-        read_only_fields = ('id','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','date','done','active')
+        fields = ('game_mode','id','dice','log','player1_score','player2_score','player1_cscore','player2_cscore','player1','player2','date','done','active')
+        read_only_fields = ('id','log','dice','player1_score','player2_score','player1_cscore','player2_cscore','player1','date','done','active')
         # extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
         game = Game(
@@ -107,18 +107,9 @@ class GameSerializer(serializers.ModelSerializer):
             player1_cscore=0,
             player2_cscore=0,
             player1= User.objects.filter(username=self.context['request'].user)[0],
-            player2= User.objects.filter(pk=self.context['request'].data['player2'])[0],
+            # player2= User.objects.filter(pk=self.context['request'].data['player2'])[0],
             game_mode= GameMode.objects.filter(pk=self.context['request'].data['game_mode'])[0],
         )
-        if self.context['request'].data['log'] == 0:
-            print('something something something')
-        if game.player2:
-            game.active = False
-        if len(game.log) > 0 :
-            if int(game.log[-1]) == 1:
-                game.player1_cscore += random.randint(1,6)
-            elif int(game.log[-1]) == 2:
-                game.player2_cscore += random.randint(1, 6)
         game.save()
         return game
     def update(self, instance, validated_data):
@@ -133,13 +124,18 @@ class GameSerializer(serializers.ModelSerializer):
         p1 = getattr(instance,'player1')
         p2 = getattr(instance,'player2')
         if self.context['request'].data['log'] ==  0 and getattr(instance,'log')=='':
+            setattr(instance,'active',False)
             setattr(instance,'log','1')
         turn = getattr(instance,'log')
         print(turn)
         if self.context['request'].data['log'] == 1  and turn == '1':
             print('b')
             cscore = getattr(instance,'player1_cscore')
+            d = []
+            setattr(instance, 'dice', d)
             r = random.randint(1,6)
+            d.append(r)
+            setattr(instance, 'dice', d)
             if r == gm.death_dice:
                 setattr(instance,'player1_cscore',0)
                 setattr(instance, 'log', '2')
@@ -148,7 +144,11 @@ class GameSerializer(serializers.ModelSerializer):
         elif self.context['request'].data['log'] == 2  and turn == '2':
             print('b')
             cscore = getattr(instance,'player2_cscore')
-            r = random.randint(1,6)
+            d = []
+            setattr(instance, 'dice', d)
+            r = random.randint(1, 6)
+            d.append(r)
+            setattr(instance, 'dice', d)
             if r == gm.death_dice:
                 setattr(instance,'player2_cscore',0)
                 setattr(instance, 'log', '1')
@@ -162,6 +162,7 @@ class GameSerializer(serializers.ModelSerializer):
             setattr(instance, 'player1_cscore', 0)
             setattr(instance,'log','2')
             if getattr(instance,'player1_score') >= gm.max_score:
+                setattr(instance,'done',True)
                 setattr(instance, 'log', '3')
 
         elif self.context['request'].data['log'] == 4  and turn == '2':
@@ -172,6 +173,7 @@ class GameSerializer(serializers.ModelSerializer):
             setattr(instance, 'player2_cscore', 0)
             setattr(instance, 'log', '1')
             if getattr(instance, 'player2_score') >= gm.max_score:
+                setattr(instance,'done',True)
                 setattr(instance, 'log', '4')
         instance.save()
 

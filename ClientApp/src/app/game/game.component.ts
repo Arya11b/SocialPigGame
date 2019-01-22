@@ -10,14 +10,13 @@ import {first} from 'rxjs/operators';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  imgFileName:string = "../app/shared/img/dice-";
-  imgPath:string = "2.png";
   loading = false;
   game: Game;
   player1: User;
   player2: User;
   id = 0;
   currentUser: User;
+  dice1= 2;
   constructor(private route: ActivatedRoute, private authenticationService: AuthenticationService
   , private gameService: GameService, private alertService: AlertService,
               private router: Router, private userService: UserService) { }
@@ -39,6 +38,7 @@ export class GameComponent implements OnInit {
       this.userService.getById(this.game.player1).subscribe(x => this.player1 = x);
       this.userService.getById(this.game.player2).subscribe(x => this.player2 = x);
     });
+    setInterval(this.getDiceNo.bind(this), 700);
   }
   getGame(){
     this.gameService.getGameById(this.game.id).subscribe(x => this.game = x);
@@ -48,6 +48,7 @@ export class GameComponent implements OnInit {
       .subscribe(
         data => {
           this.alertService.success('game reval', true);
+          this.userService.getById(this.currentUser.id).subscribe(x => this.player2 = x);
         },
         error => {
           this.alertService.error(error);
@@ -61,8 +62,7 @@ export class GameComponent implements OnInit {
         .subscribe(
           data => {
             // this.alertService.success('game reval', true);
-            this.getGame();
-            console.log(this.game);
+            this.getDiceNo();
 
           },
           error => {
@@ -76,8 +76,7 @@ export class GameComponent implements OnInit {
         .subscribe(
           data => {
             // this.alertService.success('game dice rolled', true);
-            this.getGame();
-            console.log(this.game);
+            this.getDiceNo();
           },
           error => {
             this.alertService.error(error);
@@ -93,7 +92,7 @@ export class GameComponent implements OnInit {
       this.gameService.updateGame({id: this.game.id, log: 3}).pipe(first())
         .subscribe(
           data => {
-            this.getGame();
+            this.getDiceNo();
             console.log(this.game);
 
           },
@@ -107,8 +106,8 @@ export class GameComponent implements OnInit {
       this.gameService.updateGame({id: this.game.id, log: 4}).pipe(first())
         .subscribe(
           data => {
-            console.log(this.game);
-            this.getGame();
+            this.getDiceNo();
+
           },
           error => {
             this.alertService.error(error);
@@ -118,11 +117,11 @@ export class GameComponent implements OnInit {
 
   }
   isturn(){
-    if ( +this.game.log === this.currentUser.id) return true;
+    if ( +this.game.log == this.isPlayer()) return true;
     return false;
   }
   winner(){
-    return this.currentUser.username === this.game.log;
+    return this.isPlayer() + 2 === +this.game.log;
   }
   name1(){
     if(+this.game.log === 3) return "winner";
@@ -134,7 +133,17 @@ export class GameComponent implements OnInit {
     return this.player2.username;
   }
   getDiceNo(){
-    return 5;
+    this.gameService.getGameById(this.game.id).subscribe(
+      x=> {
+        this.game = x;
+        let s = this.game.dice.replace(/[\[]/,'').replace(/[\]]/,'');
+        this.dice1 = +s[0];
+        console.log(s);
+      }
+    );
+  }
+  isPlayer(){
+    return this.currentUser.id == this.game.player1 ? 1 : 2 ;
   }
 
 }
