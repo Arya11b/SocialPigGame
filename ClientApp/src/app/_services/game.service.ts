@@ -21,7 +21,7 @@ export class GameService {
     return this.http.get<Rating[]>(`${environment.apiUrl}/games/rating`);
   }
   getModeById(id: number) {
-    return this.http.get(`${environment.apiUrl}/games/modes/${id}`);
+    return this.http.get<GameMode>(`${environment.apiUrl}/games/modes/${id}`);
   }
 
   registerMode(gameMode: GameMode) {
@@ -43,6 +43,9 @@ export class GameService {
   }
   getGameById(id: number){
     return this.http.get<Game>(`${environment.apiUrl}/games/active/${id}/`);
+  }
+  deleteGameById(id: number){
+    return this.http.delete(`${environment.apiUrl}/games/active/${id}/`);
   }
 
 }

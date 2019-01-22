@@ -22,8 +22,13 @@
     <button class="btn-hold" id="hold" mat-button (click)="hold()" [disabled]="!isturn()"><mat-icon>remove</mat-icon>Hold</button>
     <!--<input class="inp-score" id="input" placeholder="score"/>-->
      <!--<img id="dice" src="../app/shared/img/dice-2.png" alt="dice" class="dice">-->
+  <div class="dice">
   <div *ngIf="game.dice">
-    <img id="dice0" class="dice" src="{{'/assets/img/dice-' + dice1 + '.png'}}" alt="omg">
+    <img id="dice0" class="dice" src="{{'/assets/img/dice-' + dice[0] + '.png'}}" alt="omg">
   </div>
-    <!-- <img id="dice2" [src="dice3"] alt="dice2" class="dice2"> -->
+  <div *ngIf="moreThanOne()">
+    <img id="dice1" class="dice2" src="{{'/assets/img/dice-' + dice[1] + '.png'}}" alt="omg">
+  </div>
+  </div>
+  <!-- <img id="dice2" [src="dice3"] alt="dice2" class="dice2"> -->
 </mat-card>

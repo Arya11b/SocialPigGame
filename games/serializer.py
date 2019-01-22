@@ -127,35 +127,39 @@ class GameSerializer(serializers.ModelSerializer):
             setattr(instance,'active',False)
             setattr(instance,'log','1')
         turn = getattr(instance,'log')
-        print(turn)
         if self.context['request'].data['log'] == 1  and turn == '1':
-            print('b')
             cscore = getattr(instance,'player1_cscore')
             d = []
+            s = 0
             setattr(instance, 'dice', d)
-            r = random.randint(1,6)
-            d.append(r)
-            setattr(instance, 'dice', d)
-            if r == gm.death_dice:
+            for i in range(gm.dice_count):
+                r = random.randint(1,6)
+                s += r
+                print(r)
+                d.append(r)
+                setattr(instance, 'dice', d)
+            if gm.death_dice in d:
                 setattr(instance,'player1_cscore',0)
                 setattr(instance, 'log', '2')
             else:
-                setattr(instance,'player1_cscore',r + cscore)
+                setattr(instance,'player1_cscore',s + cscore)
         elif self.context['request'].data['log'] == 2  and turn == '2':
-            print('b')
-            cscore = getattr(instance,'player2_cscore')
+            cscore = getattr(instance, 'player2_cscore')
             d = []
+            s = 0
             setattr(instance, 'dice', d)
-            r = random.randint(1, 6)
-            d.append(r)
-            setattr(instance, 'dice', d)
-            if r == gm.death_dice:
-                setattr(instance,'player2_cscore',0)
-                setattr(instance, 'log', '1')
+            for i in range(gm.dice_count):
+                r = random.randint(1, 6)
+                s += r
+                print(r)
+                d.append(r)
+                setattr(instance, 'dice', d)
+            if gm.death_dice in d:
+                setattr(instance, 'player2_cscore', 0)
+                setattr(instance, 'log', '2')
             else:
-                setattr(instance,'player2_cscore',r + cscore)
+                setattr(instance, 'player2_cscore', s + cscore)
         elif self.context['request'].data['log'] == 3  and turn == '1':
-            print('b')
             cscore = getattr(instance, 'player1_cscore')
             score = getattr(instance, 'player1_score')
             setattr(instance, 'player1_score', cscore + score)
@@ -166,7 +170,6 @@ class GameSerializer(serializers.ModelSerializer):
                 setattr(instance, 'log', '3')
 
         elif self.context['request'].data['log'] == 4  and turn == '2':
-            print('b')
             cscore = getattr(instance, 'player2_cscore')
             score = getattr(instance, 'player2_score')
             setattr(instance, 'player2_score', cscore + score)
@@ -187,7 +190,6 @@ class GameModeSerializer(serializers.ModelSerializer):
         read_only_fields = ('id',)
         # extra_kwargs =  {'password': {'write-only': True}}
     def create(self, validated_data):
-        print(User.objects.filter(username=self.context['request'].user)[0])
         game_mode = GameMode(
             name= validated_data["name"],
             death_dice=validated_data["death_dice"],
@@ -196,7 +198,6 @@ class GameModeSerializer(serializers.ModelSerializer):
             max_dice_role=validated_data["max_dice_role"],
             creator= User.objects.filter(username=self.context['request'].user)[0],
         )
-        print(self.context['request'].user)
         game_mode.save()
         return game_mode
 

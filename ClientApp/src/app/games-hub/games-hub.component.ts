@@ -18,6 +18,8 @@ export class GamesHubComponent implements OnInit {
   game: Game;
   users: User[];
   currentUser: User;
+  interval;
+  timeout;
   constructor(private gameService: GameService, private alertService: AlertService
               , private authenticationService: AuthenticationService, private userService: UserService
               , private router: Router) { }
@@ -29,6 +31,7 @@ export class GamesHubComponent implements OnInit {
     this.userService.getAll().subscribe(x => this.users = x);
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     this.getActiveGames();
+    this.hasActivatedGame();
   }
   addGame(gameMode) {
     this.game = new Game;
@@ -39,7 +42,8 @@ export class GamesHubComponent implements OnInit {
         data => {
           this.alertService.success('Game added successfully wait for oppnent', true);
           this.addedGame = true;
-          setInterval(this.waitForUser.bind(this), 2000);
+          this.interval = setInterval(this.waitForUser.bind(this), 2000);
+          this.timeout = setTimeout(this.deleteGame.bind(this), 20000);
         },
         error => {
           this.alertService.error(error);
@@ -64,7 +68,38 @@ export class GamesHubComponent implements OnInit {
       console.log(game);
       if (game.player2) {
         this.router.navigate(['/game/' + game.id + '/']);
+        clearInterval(this.interval);
+        clearTimeout(this.timeout);
       }
     });
+  }
+  hasActivatedGame(){
+    this.gameService.getAllGames().subscribe(x => {
+      if(x.find(x => x.player1 == this.currentUser.id && x.active)) {
+        this.addedGame = true;
+        this.timeout = setTimeout(this.deleteGame.bind(this), 20000);
+      }
+// timeout
+    });
+  }
+  deleteGame(){
+    this.gameService.getAllGames().subscribe(
+      x => {
+        this.game = x.find(d => d.player1 == this.currentUser.id && d.active);
+        if (this.game){
+          console.log(this.game.id);
+          this.gameService.deleteGameById(this.game.id).pipe(first())
+            .subscribe(
+              data => {
+                this.alertService.success('No one accepted Your Game Yuh Yuh Yuh', true);
+                this.addedGame = false;
+              },
+              error => {
+                this.alertService.error(error);
+                this.loading = false;
+              });
+        }
+      }
+    );
   }
 }
